@@ -1,0 +1,163 @@
+/* General styles for body */
+body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    color: #ffffff;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Background Image Styling */
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 155vh;
+    z-index: -1; /* Ensure the image stays in the background */
+    background-image: url('src/assets/pic11.jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.6); /* Dim the background image for contrast */
+}
+
+/* Content Section */
+.content {
+    position: relative;
+    text-align: center;
+    padding: 80px 40px;
+    z-index: 2; /* Ensure content stays above the background */
+    margin-top: 120px; /* Adjust this value based on navbar height */
+    justify-content:baseline;
+}
+
+/* Headline */
+.headline {
+    font-size: 3rem;
+    color: #ff6600; /* Bright orange color */
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-shadow: 2px 2px 10px rgba(17, 17, 17, 0.5); /* Adding shadow for contrast */
+}
+
+/* Course Description */
+.course-description h2 {
+    font-size: 2.5rem;
+    color: #ff6600;
+    margin-bottom: 20px;
+    text-shadow: #fff;
+}
+
+.course-description p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #fff;
+}
+
+/* Learning Outcomes Section */
+.learning-outcomes h2 {
+    font-size: 2.5rem;
+    color: #ff6600;
+    margin-bottom: 20px;
+    text-shadow: #fff;
+}
+
+.learning-outcomes ul {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.learning-outcomes li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.learning-outcomes li:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #ff6600;
+    font-weight: bold;
+}
+
+/* Prerequisites Section */
+.prerequisites h2 {
+    font-size: 2.5rem;
+    color: #ff6600;
+    margin-bottom: 20px;
+    text-shadow: #fff;
+}
+
+.prerequisites p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #fff;
+}
+
+/* Duration & Schedule Section */
+.duration-schedule h2 {
+    font-size: 2.5rem;
+    color: #ff6600;
+    margin-bottom: 20px;
+text-shadow: #fff;
+}
+
+.duration-schedule ul {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.duration-schedule li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.duration-schedule li:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #ff6600;
+    font-weight: bold;
+}
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6); /* Black overlay for footer */
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 1.2em;
+    color: #f7f4f3; /* Orange footer text */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .headline {
+        font-size: 2.5rem;
+    }
+
+    .course-description, .learning-outcomes, .prerequisites, .duration-schedule {
+        font-size: 1rem;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .course-description h2, .learning-outcomes h2, .prerequisites h2, .duration-schedule h2 {
+        font-size: 1.8rem;
+    }
+
+    .course-description p, .learning-outcomes li, .prerequisites p, .duration-schedule li {
+        font-size: 1rem;
+    }
+}

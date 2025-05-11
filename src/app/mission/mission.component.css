@@ -1,0 +1,295 @@
+/* Body and Background */
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('/assets/pic8.jpg') no-repeat center center fixed; /* Replace with your image path */
+    background-size: cover;
+    color: white;
+    line-height: 1.6;
+    padding-top: 30px; /* Increased padding to ensure content is displayed below the navbar */
+    height: 110vh;
+    display: flex; /* Added to center the header vertically */
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Navbar Fixed at the Top */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the navbar stays on top of other content */
+    background-color: rgba(0, 0, 0, 0.7); /* Add a transparent black background to the navbar */
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 40px;
+    margin-bottom: 80px; /* Increased gap between header and cards */
+    background: rgba(0, 0, 0, 0.6); /* Transparent black overlay */
+}
+
+header h1 {
+    font-size: 4em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fdfdfc; /* White color for header */
+    text-shadow: 2px 2px 4px #ff6f00; /* Orange shadow */
+}
+
+header p {
+    font-size: 2em;
+    color: #f0e6dd; /* Lighter orange for paragraph */
+    text-shadow: 2px 2px 4px #ff6f00; /* Orange shadow */
+}
+
+/* Section Title */
+h2 {
+    font-size: 4em;
+    margin: 40px 0;
+    text-align: center;
+    color: #f8f4f1; /* Light color for section titles */
+    text-shadow: 2px 2px 4px #ff6f00; /* Orange shadow */
+}
+
+/* Mission and Vision Section Styles */
+.mission-vision {
+    background: rgba(0, 0, 0, 0.5); /* Darker black background for sections */
+    border: 1px solid rgba(255, 165, 0, 0.8); /* Orange border */
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    height: 100%;
+    color: white;
+    margin-top: 40px; /* Added gap between the header and the cards */
+    margin-bottom: 15px; /* Reduced gap between the cards and the footer */
+}
+
+.mission-vision:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 165, 0, 0.2); /* Subtle orange glow on hover */
+}
+
+.mission-vision h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #f60; /* Orange color for headings */
+    text-shadow: #f8f4f1;
+}
+
+.mission-vision p {
+    font-size: 1.5em;
+    color: #f8f5ee; /* Lighter orange for paragraph text */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6); /* Black overlay for footer */
+    margin-top: 50px; /* Reduced margin to bring the footer closer */
+}
+
+footer p {
+    font-size: 1.2em;
+    color: #f7f4f3; /* Orange footer text */
+}
+
+/* For centering the content of the page vertically and horizontally */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Added gap between the columns for mission and vision cards */
+}
+/* Body and Background */
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('/assets/pic8.jpg') no-repeat center center fixed; /* Replace with your image path */
+    background-size: cover;
+    color: white;
+    line-height: 1.6;
+    padding-top: 30px; /* Increased padding to ensure content is displayed below the navbar */
+    height: 110vh;
+    display: flex; /* Added to center the header vertically */
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Navbar Fixed at the Top */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the navbar stays on top of other content */
+    background-color: rgba(0, 0, 0, 0.7); /* Add a transparent black background to the navbar */
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 40px;
+    margin-bottom: 80px; /* Increased gap between header and cards */
+    background: rgba(0, 0, 0, 0.6); /* Transparent black overlay */
+}
+
+header h1 {
+    font-size: 4em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fdfdfc; /* White color for header */
+    text-shadow: 2px 2px 4px #ff6f00; /* Orange shadow */
+}
+
+header p {
+    font-size: 2em;
+    color: #f0e6dd; /* Lighter orange for paragraph */
+    text-shadow: 2px 2px 4px #ff6f00; /* Orange shadow */
+}
+
+/* Section Title */
+h2 {
+    font-size: 4em;
+    margin: 40px 0;
+    text-align: center;
+    color: #f8f4f1; /* Light color for section titles */
+    text-shadow: 2px 2px 4px #ff6f00; /* Orange shadow */
+}
+
+/* Mission and Vision Section Styles */
+.mission-vision {
+    background: rgba(0, 0, 0, 0.5); /* Darker black background for sections */
+    border: 1px solid rgba(255, 165, 0, 0.8); /* Orange border */
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    height: 100%;
+    color: white;
+    margin-top: 40px; /* Added gap between the header and the cards */
+    margin-bottom: 15px; /* Reduced gap between the cards and the footer */
+}
+
+.mission-vision:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 165, 0, 0.2); /* Subtle orange glow on hover */
+}
+
+.mission-vision h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #f60; /* Orange color for headings */
+    text-shadow: #f8f4f1;
+}
+
+.mission-vision p {
+    font-size: 1.5em;
+    color: #f8f5ee; /* Lighter orange for paragraph text */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6); /* Black overlay for footer */
+    margin-top: 50px; /* Reduced margin to bring the footer closer */
+}
+
+footer p {
+    font-size: 1.2em;
+    color: #f7f4f3; /* Orange footer text */
+}
+
+/* For centering the content of the page vertically and horizontally */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Added gap between the columns for mission and vision cards */
+}
+/* Media Query for Mobile and Tablets */
+@media (max-width: 768px) {
+    /* Adjust body height and padding for mobile view */
+    body {
+        height:auto; /* Allow content to grow with the screen */
+        padding-top: 100px; /* Give space for the navbar */
+    
+    }
+
+    /* Adjust header styles for smaller screens */
+    header {
+        padding: 30px;
+        margin-bottom: 50px;
+    }
+
+    header h1 {
+        font-size: 2.5em; /* Smaller font for header */
+    }
+
+    header p {
+        font-size: 1.5em; /* Smaller font for paragraph */
+    }
+
+    /* Mission and Vision Section in Column on Small Screens */
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mission-vision {
+        width: 90%; /* Ensure the cards don't stretch too wide on mobile */
+        margin-top: 20px; /* Reduce space between sections */
+    }
+
+    .mission-vision h3 {
+        font-size: 1.8em; /* Smaller font for headings */
+    }
+
+    .mission-vision p {
+        font-size: 1.2em; /* Smaller font for paragraph text */
+    }
+
+    /* Adjust footer for smaller screens */
+    footer p {
+        font-size: 1em; /* Smaller font for footer text */
+    }
+}
+
+/* Media Query for Extra Small Mobile Screens */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em; /* Even smaller header for very small screens */
+    }
+
+    header p {
+        font-size: 1.2em; /* Even smaller paragraph text */
+    }
+
+    .mission-vision {
+        width: 100%; /* Full-width for mobile */
+        padding: 15px; /* Slightly smaller padding */
+    }
+
+    .mission-vision h3 {
+        font-size: 1.5em; /* Smaller heading */
+    }
+
+    .mission-vision p {
+        font-size: 1.1em; /* Even smaller paragraph text */
+    }
+}

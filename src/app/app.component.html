@@ -1,0 +1,62 @@
+<div class="body">
+<!-- Top Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand" routerLink="/">
+      <img src="../assets/pic2.png" alt="Out O Box Logo" class="logo-img">
+    </a>
+    
+    <!-- Navbar Toggle for mobile view -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a routerLink="" routerLinkActive="active" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/about" routerLinkActive="active" class="nav-link">About Us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Courses
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" routerLink="/cyber" routerLinkActive="active">Introduction to Cybersecurity</a></li>
+            <li><a class="dropdown-item" routerLink="/network" routerLinkActive="active">Network Security Basics</a></li>
+            <li><a class="dropdown-item" routerLink="/hack" routerLinkActive="active">Ethical Hacking Essentials</a></li>
+            <li><a class="dropdown-item" routerLink="/security" routerLinkActive="active">Cryptography for Security</a></li>
+            <li><a class="dropdown-item" routerLink="/testing" routerLinkActive="active">Advanced Penetration Testing (Coming Soon)</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/certifications" routerLinkActive="active" class="nav-link">Certifications</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/mission" routerLinkActive="active" class="nav-link">Mission & Vision</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/contact" routerLinkActive="active" class="nav-link">Contact Us</a>
+        </li>
+      </ul>
+      <div class="download-button">
+        <a href="../../assets/brochure/Out O Box Brochure (2).pdf" download="Out O Box Brochure (2).pdf">
+          <button class="download-button">Download Brochure</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</nav>
+
+
+
+
+<!-- Router Outlet -->
+<router-outlet></router-outlet>
+
+

@@ -1,0 +1,104 @@
+/* Custom Styling for Contact Us Page */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('src/assets/pic7.png') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column; /* Stack content */
+    min-height: 100vh; /* Ensure body takes full height */
+}
+
+header {
+    z-index: 10; /* Keeps navbar on top */
+}
+
+header h1 {
+    font-size: 3.5em;
+    color: #fdfdfc;
+    text-shadow: 2px 2px 4px #ff6f00;
+}
+
+header p {
+    font-size: 1.8em;
+    color: #f0e6dd;
+    text-shadow: 2px 2px 4px #ff6f00;
+}
+
+/* Contact Us Section */
+main {
+    flex: 1; /* Content fills remaining space */
+    padding: 20px;
+}
+
+/* Card Styling */
+.card {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 165, 0, 0.8);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 165, 0, 0.2); /* Subtle orange glow on hover */
+}
+
+.card-title {
+    color: #ff6f00;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.card-text {
+    color: #f8f5ee;
+    font-size: 1.2em;
+}
+
+.btn-outline-warning {
+    color: #ff6f00;
+    border-color: #ff6f00;
+}
+
+.btn-outline-warning:hover {
+    background-color: #f1a164;
+    color: black;
+}
+
+/* Footer Styling */
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+   
+    text-align: center;
+    margin-top: 30px; /* Push footer to the bottom */
+}
+
+footer p {
+    font-size: 1.2em;
+    color: #f7f4f3;
+}
+
+/* Social Media Icons Section */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Add space between icons */
+}
+
+.social-icons i {
+    font-size: 2em; /* Icon size */
+    color: #f7f4f3;
+    transition: color 0.3s ease;
+}
+
+.social-icons i:hover {
+    color: #ff6f00; /* Change color on hover */
+}
+

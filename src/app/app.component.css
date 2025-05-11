@@ -1,0 +1,238 @@
+/* Body Styling */
+.body {
+  
+  margin: 0;
+  display: flex;
+  flex-direction: column; 
+  height: 100vh; 
+} 
+
+/* Navbar Styling */
+.navbar {
+  background-color: transparent !important;  /* Transparent background */
+  /* padding: 15px 0;  Increased padding for a larger navbar */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;  /* Ensure navbar stays on top of all content */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);  /* Slightly more prominent shadow */
+}
+
+/* Logo Image Styling */
+.navbar-brand img {
+  height: 80px;  /* Increased logo height */
+  width: auto;
+  transition: transform 0.3s ease;  /* Smooth transition for logo size */
+}
+
+/* Logo hover effect */
+.navbar-brand:hover img {
+  transform: scale(1.1);  /* Slight zoom effect on hover */
+}
+
+/* Navbar Links Styling */
+.nav-link {
+  font-size: 1.3rem;  /* Increased font size for larger navbar links */
+  color: #ffffff;  /* White text */
+  padding: 15px 25px;  /* Increased padding for more space around the text */
+  text-transform: uppercase;  /* Capitalize text */
+  font-weight: bold;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  letter-spacing: 1px;  /* Slight space between letters */
+}
+
+/* Navbar Link Hover Effect */
+.nav-link:hover, .nav-link.active {
+  color: #ff6600;  /* Orange color on hover */
+  background-color: rgba(255, 102, 0, 0.1);  /* Light orange background */
+  border-radius: 5px;  /* Rounded corners */
+}
+
+/* Navbar Dropdown Styling */
+.nav-item.dropdown {
+  position: relative;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  display: none;  /* Hide dropdown by default */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  /* Slightly larger shadow */
+  min-width: 250px;  /* Increased minimum width for dropdown */
+}
+
+/* Show dropdown on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Dropdown Item Styling */
+.dropdown-item {
+  color: #333;  /* Dark text */
+  padding: 15px 25px;  /* Increased padding */
+  text-decoration: none;
+  font-size: 1.1rem;  /* Increased font size */
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for dropdown items */
+.dropdown-item:hover {
+  background-color: rgba(255, 102, 0, 0.1);
+  color: #ff6600;
+  border-radius: 5px;
+}
+
+/* Navbar Toggle Button for Mobile */
+.navbar-toggler {
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 1.5rem;  /* Larger toggle button */
+}
+
+/* Navbar Collapse */
+.navbar-collapse {
+  justify-content: flex-end;  /* Align items to the right */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 991px) {
+  .navbar {
+    padding: 15px 0;  /* Increased padding for mobile */
+  }
+
+  .nav-link {
+    font-size: 1.2rem;  /* Slightly larger text for mobile */
+    padding: 12px 20px;  /* Increased padding on mobile */
+  }
+
+  .navbar-collapse {
+    text-align: center;
+  }
+
+  .dropdown-menu {
+    width: 100%;
+    box-shadow: none;  /* No shadow for mobile */
+  }
+}
+
+/* Footer Styling */
+footer {
+  background-color: rgba(0, 0, 0, 0.6); /* Black overlay for footer */
+  color: #f7f4f3;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;  /* Pushes the footer to the bottom of the page */
+}
+
+/* Footer Text Styling */
+footer p {
+  font-size: 1.2em;
+  color: #f7f4f3; /* Orange footer text */
+}
+
+/* Content Section */
+.container {
+  flex: 1; /* Makes the content section take up remaining space */
+}
+
+/* Download Button Styling */
+.download-button {
+  /* padding: 10px 10px; */
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 20px;
+  position: relative;
+  /* margin-top: 20px; Added margin to the top */
+  width: auto;
+  min-width: 150px;  /* Ensures a minimum width */
+  text-align: center;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 0;  /* Reduced padding */
+  }
+
+  .navbar-brand img {
+    height: 60px;  /* Reduced logo height */
+  }
+
+  .nav-link {
+    font-size: 1.1rem;  /* Smaller font size for links */
+    padding: 12px 18px;  /* Reduced padding */
+  }
+
+  .navbar-toggler {
+    font-size: 1.2rem;  /* Smaller toggle button */
+  }
+
+  /* Make the navbar links stack vertically in mobile view */
+  .navbar-collapse {
+    flex-direction: column;  /* Stack navbar items vertically */
+    width: 100%;
+    align-items: center;
+    background-color: #333;  /* Dark background for mobile navbar */
+  }
+
+  .nav-link {
+    padding: 12px 20px;  /* Adjust padding for mobile view */
+    width: 100%;  /* Make links take up the full width */
+    text-align: center;  /* Center the text */
+  }
+
+  /* Dropdown menu for mobile */
+  .dropdown-menu {
+    min-width: 200px;  /* Slightly reduced width */
+  }
+
+  /* Adjust download button for smaller screens */
+  .download-button {
+    width: 70%;  /* Adjust width for better mobile fit */
+    font-size: 14px;  /* Slightly smaller font size */
+    padding: 12px 20px;  /* Increased padding for better touch targets */
+  }
+}
+
+/* Additional Mobile Adjustments */
+@media (max-width: 576px) {
+  /* Further reduce logo size on very small screens */
+  .navbar-brand img {
+    height: 50px;  /* Smaller logo for very small screens */
+  }
+
+  .nav-link {
+    font-size: 1rem;  /* Even smaller font size for mobile */
+    padding: 10px 15px;  /* Reduced padding */
+  }
+
+  /* Adjust background height for mobile screens */
+  .body {
+    height: auto;  /* Let the body height grow to fit content */
+  }
+
+  .navbar {
+    padding: 8px 0;  /* Further reduced padding for very small screens */
+  }
+
+  .navbar-collapse {
+    padding-top: 10px;  /* Add a little padding at the top */
+  }
+
+  /* Adjust download button size for very small screens */
+  .download-button {
+    width: 80%;  /* Adjust the button to fit mobile screens */
+    font-size: 19px;  /* Even smaller font size */
+    padding: 5px 10px;  /* Smaller padding for small screens */
+    margin-bottom: 10px;
+  }
+}

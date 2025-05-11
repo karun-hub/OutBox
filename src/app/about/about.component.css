@@ -1,0 +1,162 @@
+ /* General styles for body */
+body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    color: #ffffff;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Background Image Styling (used instead of video for About page) */
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 155vh;
+    z-index: -1; /* Ensure the image stays in the background */
+    background-image: url('src/assets/pic9.jpg'); /* Replace with your About Us background image */
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.6); /* Dim the background image for contrast */
+}
+
+/* Content Section */
+.content {
+    position: relative;
+    text-align: center;
+    padding: 20px 40px;
+    z-index: 2; /* Ensure content stays above the background */
+    margin-top: 120px; /* Adjust this value based on navbar height */
+}
+
+/* Headline */
+.headline {
+    font-size: 3rem;
+    color: #ff6600; /* Bright orange color */
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-shadow: 2px 2px 10px rgba(250, 245, 245, 0.5); /* Adding shadow for contrast */
+}
+
+/* Subheading */
+.subheading {
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Adding shadow for contrast */
+}
+
+/* Mission Statement Section */
+.mission-statement, .vision-statement, .our-values, .why-choose {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.mission-statement h2,
+.vision-statement h2,
+.our-values h2,
+.why-choose h2 {
+    font-size: 2.5rem;
+    color: #ff6600;
+    margin-bottom: 20px;
+}
+
+.mission-statement p,
+.vision-statement p,
+.our-values ul,
+.why-choose ul {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #fff;
+    margin: 0;
+}
+
+/* Values List */
+.our-values ul {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.our-values ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.our-values ul li:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #ff6600;
+    font-weight: bold;
+}
+
+/* Why Choose Section */
+.why-choose ul {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.why-choose ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.why-choose ul li:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #ff6600;
+    font-weight: bold;
+}
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6); /* Black overlay for footer */
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 1.2em;
+    color: #f7f4f3; /* Orange footer text */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .headline {
+        font-size: 2.5rem;
+    }
+
+    .subheading {
+        font-size: 1.5rem;
+    }
+
+    .mission-statement, .vision-statement, .our-values, .why-choose {
+        padding: 0px;
+    }
+
+    .mission-statement h2, .vision-statement h2, .our-values h2, .why-choose h2 {
+        font-size: 1.8rem;
+    }
+
+    .mission-statement p, .vision-statement p, .our-values ul li, .why-choose ul li {
+        font-size: 1rem;
+    }
+}
+.background-image{
+    height: 180vh;
+}
