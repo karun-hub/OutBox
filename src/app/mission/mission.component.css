@@ -113,7 +113,7 @@ footer p {
 /* Body and Background */
 body {
     font-family: 'Arial', sans-serif;
-    background: url('/assets/pic8.jpg') no-repeat center center fixed; /* Replace with your image path */
+    background: url('src/assets/pic8.jpg') no-repeat center center fixed; /* Replace with your image path */
     background-size: cover;
     color: white;
     line-height: 1.6;
