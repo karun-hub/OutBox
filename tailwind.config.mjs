@@ -11,7 +11,10 @@ export default {
     },
     extend: {
       fontFamily: {
-        grotesk: ["Grotesk", "sans-serif"],
+        grotesk: ["Grotesk","poppins","inter", "sans-serif"],
+        inter: ["Inter", "ui-sans-serif", "system-ui"],
+                poppins: ["Poppins", "ui-sans-serif", "system-ui"],
+
       },
       fontWeight: {
         regular: 400,

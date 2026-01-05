@@ -1,125 +1,101 @@
 ---
-import { Image } from "astro:assets";
-import Facebook from "../../assets/facebook.svg";
-import Linkedin from "../../assets/linkedin.svg";
-import Logo from "../../assets/logo-alt.svg";
-import Twitter from "../../assets/twitter.svg";
-import ShortForm from "../ui/ShortForm.astro";
-
-const logos = [
-  { name: "Facebook", src: Facebook, link: "https://facebook.com" },
-  { name: "Linkedin", src: Linkedin, link: "https://linkedin.com" },
-  { name: "Twitter", src: Twitter, link: "https://twitter.com" },
-];
-
-const links = [
-  { name: "About us", href: "#about" },
-  { name: "Services", href: "#services" },
-  { name: "Use Cases", href: "#cases" },
-  { name: "Pricing", href: "#Testimonials" },
-  { name: "Blog", href: "#Home" },
-];
 ---
-
-<section class="sm:px-5">
-  <div class="w-full max-w-[1240px] mx-auto">
+<footer class="relative overflow-hidden bg-white">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 relative z-10 my-11 pb-32">
+    {/* Top area */}
     <div
-      class="px-[15px] bg-dark text-gray py-[55px] lg:px-[60px] sm:rounded-t-[45px]"
+      class="grid gap-10 py-12 sm:grid-cols-12 border-t
+             [border-image:linear-gradient(to_right,transparent,var(--color-slate-200),transparent)1]"
     >
-      <div>
-        <div
-          class="flex flex-col lg:flex-row gap-7 items-center justify-between"
-        >
-          <picture>
-            <a href="#home">
-              <Image src={Logo} alt="Logo for Kreatif Brand" />
-            </a>
-          </picture>
-          <ul class="flex flex-col sm:flex-row gap-5">
-            {
-              links.map((link) => {
-                return (
-                  <li class="text-center">
-                    <a class="underline" href={link.href}>
-                      {link.name}
-                    </a>
-                  </li>
-                );
-              })
-            }
-          </ul>
-          <ul class="flex gap-5">
-            {
-              logos.map((logo) => {
-                return (
-                  <li>
-                    <a href={logo.link} target="_blank">
-                      <picture>
-                        <Image src={logo.src} alt={logo.name} />
-                      </picture>
-                    </a>
-                  </li>
-                );
-              })
-            }
-          </ul>
-        </div>
-
-        <div class="flex flex-col lg:flex-row mt-[66px] mb-[51px]">
-          <div
-            class="flex text-center lg:text-start flex-col w-full lg:w-[30%]"
-          >
-            <h3 class="mb-5 text-center md:text-left text-2xl text-green">Contact us</h3>
-            <div class="flex flex-col justify-between gap-4">
-              <span> Email: examplemail.com </span>
-              <span> Phone: +123 456 789 </span>
-              <span class="lg:w-3/4">
-                Address: 1234 Street Name, City Name, Country Name
-              </span>
-            </div>
-          </div>
-          <div class="flex-grow my-10 lg:my-0 lg:ml-12">
-            <ShortForm />
-          </div>
-        </div>
+      {/* Logo block */}
+      <div class="space-y-4 sm:col-span-12 lg:col-span-4">
+        <img
+          src="/los.png"
+          alt="OutOBox Logo"
+          class="h-20 w-auto"
+        />
+        <p class="text-sm text-gray-600">
+          © OutOBox – All rights reserved.
+        </p>
       </div>
 
-      <div class="h-[1px] bg-gray mb-5"></div>
-      <div
-        class="flex flex-col lg:flex-row h-20 justify-center mt-4 text-center md:justify-between md:mt-0"
-      >
-        <span
-          >2024 Positivus - Made With <a
-            class="underline"
-            target="_blank"
-            href="https://astro.build">Astro</a
-          > by 
-          <a 
-          class="underline"
-          target="_blank"
-          href="https://manulthanura.com">Manul</a
-          ></span
-        >&nbsp
-        <span>
-          Credits (
-          <a
-            href="https://www.olgaskuja.design/"
-            target="_blank"
-            class="underline">Olga</a
-          >,
-          <a
-            href="https://esteban-vasquez.netlify.app/"
-            target="_blank"
-            class="underline">Esteban</a
-          >)
-          <span> &</span>
-          <a
-            class="underline"
-            href="https://creativecommons.org/licenses/by/4.0/"
-            target="_blank">Licence</a
-          >
-        </span>
+      {/* Company */}
+      <div class="space-y-3 sm:col-span-6 md:col-span-3 lg:col-span-2">
+        <h3 class="text-sm font-semibold">Company</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a class="text-gray-600 hover:text-gray-900" href="/about">About us</a></li>
+          <li><a class="text-gray-600 hover:text-gray-900" href="/courses">Courses</a></li>
+          <li><a class="text-gray-600 hover:text-gray-900" href="/certifications">Certifications</a></li>
+          <li><a class="text-gray-600 hover:text-gray-900" href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="space-y-3 sm:col-span-6 md:col-span-3 lg:col-span-2">
+  <h3 class="text-sm font-semibold">
+    <a href="/#services" class="hover:text-gray-900">
+      Services
+    </a>
+  </h3>
+  <ul class="space-y-2 text-sm">
+    <li class="text-gray-600">Web Development</li>
+    <li class="text-gray-600">Full Stack Apps</li>
+    <li class="text-gray-600">SEO</li>
+    <li class="text-gray-600">Cyber Security</li>
+  </ul>
+</div>
+
+      {/* Social */}
+<div class="space-y-3 sm:col-span-12 md:col-span-3 lg:col-span-2 lg:col-start-11">
+        <h3 class="text-sm font-semibold">Social</h3>
+        <ul class="flex gap-4">
+          <!-- Twitter -->
+          
+
+          <!-- LinkedIn -->
+          <li>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"
+               class="text-blue-600 hover:text-blue-700">
+              <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                <path d="M4.98 3.5C4.98 4.9 3.9 6 2.5 6S0 4.9 0 3.5 1.1 1 2.5 1 4.98 2.1 4.98 3.5ZM0 24h5V7H0v17ZM7.5 7h4.8v2.3h.1c.7-1.3 2.4-2.6 4.9-2.6 5.2 0 6.2 3.4 6.2 7.8V24h-5v-7.7c0-1.8 0-4.1-2.5-4.1s-2.9 1.9-2.9 4V24h-5V7Z"/>
+              </svg>
+            </a>
+          </li>
+
+          <!-- GitHub -->
+          <li>
+  <a
+    href="https://instagram.com/outobox_cyber_solutions"
+    target="_blank"
+    rel="noopener"
+    aria-label="Instagram"
+    class="text-pink-500 transition hover:text-pink-600"
+  >
+    <svg
+      class="h-6 w-6 fill-current opacity-0.5"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7.75 2h8.5C19.55 2 22 4.45 22 7.75v8.5C22 19.55 19.55 22 16.25 22h-8.5C4.45 22 2 19.55 2 16.25v-8.5C2 4.45 4.45 2 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm5.25-.88a1.13 1.13 0 1 1-2.26 0 1.13 1.13 0 0 1 2.26 0Z"
+      />
+    </svg>
+  </a>
+</li>
+        </ul>
       </div>
     </div>
   </div>
-</section>
+
+  {/* BIG BACKGROUND TEXT */}
+  <div class="absolute inset-x-0 bottom-[-20px] h-[290px] pointer-events-none">
+    <div
+      class="pointer-events-none font-inter absolute left-1/2 -translate-x-1/2 text-center text-[358px] font-bold leading-none select-none text-gray bg-clip-text bg-gradient-to-b from-gray-200 via-gray-100 to-gray-300/60 [mask-image:linear-gradient(to_top,white_0%,transparent)]
+    [-webkit-mask-image:linear-gradient(to_top,white_0%,transparent)]"
+    >
+      OutOBox
+    </div>
+
+    <div class="absolute inset-x-0 bottom-[-40%] flex justify-center">
+      <div class="h-72 w-72 rounded-full bg-blue-600 blur-[120px] opacity-40"></div>
+    </div>
+  </div>
+</footer>

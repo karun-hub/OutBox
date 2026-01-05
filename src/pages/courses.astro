@@ -1,0 +1,374 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Card from "../components/ui/Card.astro";
+
+const animationStyles = `
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  .scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+  }
+
+  .scroll-animate.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .level-badge {
+    display: inline-block;
+    padding: 0.375rem 0.875rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  .level-beginner {
+    background-color: #dcfce7;
+    color: #166534;
+  }
+
+  .level-intermediate {
+    background-color: #fef3c7;
+    color: #92400e;
+  }
+
+  .level-advanced {
+    background-color: #fee2e2;
+    color: #991b1b;
+  }
+
+  .course-header {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .course-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+  .course-content.expanded {
+    max-height: 1200px;
+  }
+
+  .toggle-icon {
+    transition: transform 0.3s ease;
+  }
+
+  .toggle-icon.rotated {
+    transform: rotate(180deg);
+  }
+`;
+
+const courses = [
+  {
+    level: "Beginner",
+    duration: "1 Month",
+    hours: "40 hours",
+    title: "Introduction to Cybersecurity",
+    description: "Dive into the fundamentals of cybersecurity with this beginner-friendly course covering essential concepts, common threats, and protection techniques.",
+    courseDescription: "This course is designed for beginners to dive into the fundamentals of cybersecurity. Students will learn about the importance of cybersecurity, basic terminology, common threats, and essential techniques to safeguard information. A great starting point for anyone new to the field!",
+    outcomes: [
+      "Understand basic cybersecurity concepts and terms",
+      "Learn about various types of cyber threats and attacks",
+      "Gain knowledge of basic security measures for protecting devices and networks",
+      "Build a foundation for more advanced cybersecurity courses"
+    ],
+    schedule: "Saturday & Sunday: 10:00 AM - 3:00 PM (5 hours each day)\nMonday to Thursday: 8:00 PM - 9:00 PM (1 hour each day)\n20 offline + 20 online hours"
+  },
+  {
+    level: "Beginner",
+    duration: "1 Month",
+    hours: "40 hours",
+    title: "Network Security Basics",
+    description: "Master the fundamentals of network security including firewalls, encryption, VPNs, and essential tools to protect network infrastructure.",
+    courseDescription: "This course covers the basics of securing networks. Students will explore firewalls, encryption, VPNs, and other tools used to protect network infrastructure. By the end of the course, students will be able to apply fundamental network security practices to safeguard data and communications.",
+    outcomes: [
+      "Understand the importance of network security in the modern digital world",
+      "Learn about firewalls, VPNs, encryption, and other network security tools",
+      "Gain practical knowledge of securing personal and organizational networks",
+      "Be prepared for more advanced network security courses"
+    ],
+    schedule: "Saturday & Sunday: 10:00 AM - 3:00 PM (5 hours each day)\nMonday to Thursday: 8:00 PM - 9:00 PM (1 hour each day)\n20 offline + 20 online hours"
+  },
+  {
+    level: "Intermediate",
+    duration: "1 Month",
+    hours: "40 hours",
+    title: "Ethical Hacking Essentials",
+    description: "Learn the ethical hacker's mindset and penetration testing tools to identify and improve system security vulnerabilities.",
+    courseDescription: "In this intermediate course, students will learn the ethical hacker's mindset and various tools used for penetration testing. From vulnerability assessments to exploiting weaknesses, this course provides the skills needed to test and improve system security ethically.",
+    outcomes: [
+      "Understand the ethical hacking process and methodologies",
+      "Gain hands-on experience using tools like Kali Linux and Metasploit",
+      "Learn how to conduct vulnerability assessments and penetration tests",
+      "Develop a strong foundation for advanced penetration testing techniques"
+    ],
+    schedule: "Saturday & Sunday: 10:00 AM - 3:00 PM (5 hours each day)\nMonday to Thursday: 8:00 PM - 9:00 PM (1 hour each day)\n20 offline + 20 online hours"
+  },
+  {
+    level: "Intermediate",
+    duration: "1 Month",
+    hours: "40 hours",
+    title: "Cryptography Essentials",
+    description: "Explore cryptographic techniques including encryption, hashing, and digital signatures to secure communications and protect data.",
+    courseDescription: "This course explores the essential techniques of cryptography used to secure communication and protect data. Learn how encryption, hashing, and digital signatures work, and how cryptography plays a critical role in modern security protocols.",
+    outcomes: [
+      "Understand how cryptography is used to secure digital communication",
+      "Learn about encryption algorithms, hashing, and key management",
+      "Be able to implement basic cryptographic solutions for security",
+      "Prepare for specialized cryptography topics in advanced courses"
+    ],
+    schedule: "Saturday & Sunday: 10:00 AM - 3:00 PM (5 hours each day)\nMonday to Thursday: 8:00 PM - 9:00 PM (1 hour each day)\n20 offline + 20 online hours"
+  },
+  {
+    level: "Advanced",
+    duration: "1 Month",
+    hours: "40 hours",
+    title: "Advanced Penetration Testing",
+    description: "Master advanced penetration testing techniques, complex system exploitation, and modern defense bypass strategies.",
+    courseDescription: "This advanced course focuses on mastering penetration testing techniques, from exploiting vulnerabilities in complex systems to bypassing modern defenses. Students will gain hands-on experience with industry-leading tools and strategies used by professional penetration testers.",
+    outcomes: [
+      "Master advanced techniques used in penetration testing",
+      "Gain in-depth knowledge of vulnerability scanning and exploitation",
+      "Learn to exploit complex systems and bypass security mechanisms",
+      "Prepare for certifications like CEH and OSCP"
+    ],
+    schedule: "Saturday & Sunday: 10:00 AM - 3:00 PM (5 hours each day)\nMonday to Thursday: 8:00 PM - 9:00 PM (1 hour each day)\n20 offline + 20 online hours"
+  }
+];
+---
+
+<MainLayout title="Our Course Catalog">
+  <main class="space-y-20">
+    <!-- Header Section with Different Layout -->
+    <div class="py-16 px-4 mx-auto max-w-screen-xl lg:py-24 lg:px-6">
+      <div class="grid md:grid-cols-2 gap-10 items-center mb-20">
+        <!-- Left Side - Text -->
+        <div class="scroll-animate">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-1 h-8 bg-orange-500 rounded-full"></div>
+            <span class="text-orange-500 font-semibold uppercase tracking-wide text-sm">Our Courses</span>
+          </div>
+          <h1 class="mb-4 text-4xl lg:text-5xl tracking-tight font-extrabold text-gray-900">
+            Master Cybersecurity Skills
+          </h1>
+          <p class="mb-6 font-light text-gray-600 sm:text-lg leading-relaxed">
+            Structured learning paths from beginner to advanced level with hybrid online and offline training. Equip yourself with industry-recognized expertise and practical knowledge.
+          </p>
+          <a href="/certifications">
+            <button class="inline-flex items-center px-8 py-4 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors font-semibold">
+              Explore Certifications
+              <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </button>
+          </a>
+        </div>
+
+        <!-- Right Side - Quote/Stats -->
+        <div class="scroll-animate" style="animation-delay: 0.1s;">
+          <Card isUnderline={true}>
+            <div class="p-8 lg:p-10">
+              <div class="mb-6">
+                <svg class="w-12 h-12 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M3 21c3 0 7-1 7-8V5c0-1.25-4.25-2.25-7-2-2.75 0-7 .75-7 2v11c0 1 0 4 3 4s4-1 4-4V8c1.25 0 4 .75 4 4"></path>
+                </svg>
+              </div>
+              <p class="text-xl lg:text-2xl font-semibold text-gray-900 mb-4">
+                "Invest in your future with cybersecurity expertise. Our comprehensive courses provide the skills you need to succeed in today's digital landscape."
+              </p>
+              <div class="flex gap-4 mt-8 pt-6 border-t border-gray-200">
+                <div>
+                  <div class="text-3xl font-bold text-orange-500">500+</div>
+                  <p class="text-sm text-gray-600">Students Trained</p>
+                </div>
+                <div>
+                  <div class="text-3xl font-bold text-orange-500">95%</div>
+                  <p class="text-sm text-gray-600">Satisfaction Rate</p>
+                </div>
+                <div>
+                  <div class="text-3xl font-bold text-orange-500">10+</div>
+                  <p class="text-sm text-gray-600">Expert Courses</p>
+                </div>
+              </div>
+            </div>
+          </Card>
+        </div>
+      </div>
+
+      <!-- Courses Section -->
+      <div class="space-y-8">
+        <div class="mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 flex items-center gap-3">
+            <span class="w-1 h-8 bg-orange-500 rounded-full"></span>
+            Featured Courses
+          </h2>
+        </div>
+
+        <div class="space-y-8 lg:grid lg:grid-cols-2 sm:gap-6 xl:gap-8 lg:space-y-0">
+          {courses.map((course, idx) => (
+            <div class="scroll-animate" style={`animation-delay: ${idx * 0.08}s;`}>
+              <Card isUnderline={true}>
+                <div class="flex flex-col h-full">
+                  <!-- Course Header -->
+                  <div class="course-header p-6 flex justify-between items-start gap-4 cursor-pointer hover:text-orange-500 transition-colors" data-toggle={`course-${idx}`}>
+                    <div class="flex-1">
+                      <div class="flex flex-wrap gap-2 mb-3">
+                        <span class={`level-badge level-${course.level.toLowerCase()}`}>
+                          {course.level}
+                        </span>
+                        <span class="text-xs font-medium text-gray-500">{course.duration} • {course.hours}</span>
+                      </div>
+                      <h3 class="text-xl lg:text-2xl font-bold text-gray-900 mb-2">
+                        {course.title}
+                      </h3>
+                      <p class="text-gray-700 text-sm">
+                        {course.description}
+                      </p>
+                    </div>
+                    <svg class="w-6 h-6 text-orange-500 toggle-icon flex-shrink-0 mt-1" data-toggle={`course-${idx}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                  </div>
+
+                  <!-- Course Content -->
+                  <div id={`course-${idx}`} class="course-content border-t border-gray-200">
+                    <div class="p-6 space-y-4">
+                      <div>
+                        <h4 class="font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                          <span class="w-1 h-4 bg-orange-500 rounded"></span>
+                          Course Description
+                        </h4>
+                        <p class="text-sm text-gray-700">{course.courseDescription}</p>
+                      </div>
+
+                      <div>
+                        <h4 class="font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                          <span class="w-1 h-4 bg-orange-500 rounded"></span>
+                          Learning Outcomes
+                        </h4>
+                        <ul class="space-y-2">
+                          {course.outcomes.map(outcome => (
+                            <li class="flex items-start gap-2">
+                              <div class="w-1.5 h-1.5 rounded-full bg-orange-500 mt-1.5 flex-shrink-0"></div>
+                              <span class="text-sm text-gray-700">{outcome}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h4 class="font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                          <span class="w-1 h-4 bg-orange-500 rounded"></span>
+                          Schedule
+                        </h4>
+                        <div class="bg-orange-50 rounded p-3">
+                          {course.schedule.split('\n').map(line => (
+                            <p class="text-xs text-gray-700 mb-1">{line}</p>
+                          ))}
+                        </div>
+                      </div>
+
+                      <a href="/contact">
+                        <button class="w-full inline-flex items-center justify-center px-6 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors font-semibold text-sm mt-4">
+                          Contact Now
+                          <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                          </svg>
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <style set:html={animationStyles}></style>
+
+  <script>
+    // Scroll animation observer
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+        }
+      });
+    }, {
+      threshold: 0.1,
+    });
+
+    document.querySelectorAll(".scroll-animate").forEach((el) => {
+      observer.observe(el);
+    });
+
+    // Course toggle functionality
+    document.querySelectorAll(".course-header, .toggle-icon").forEach(el => {
+      el.addEventListener("click", function(this: HTMLElement) {
+        const courseId = this.getAttribute("data-toggle") || this.closest(".course-header")?.getAttribute("data-toggle");
+        const courseCard = this.closest(".flex.flex-col.h-full");
+        const courseContent = courseCard?.querySelector(`#${courseId}`) as HTMLElement | null;
+        const toggleIcon = courseCard?.querySelector(".toggle-icon");
+        
+        if (courseContent) {
+          courseContent.classList.toggle("expanded");
+          toggleIcon?.classList.toggle("rotated");
+        }
+      });
+    });
+  </script>
+</MainLayout>

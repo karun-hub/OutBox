@@ -1,14 +1,10 @@
 import { defineConfig } from 'astro/config';
+import tailwind from '@astrojs/tailwind';
+import react from '@astrojs/react';
 
-import tailwind from "@astrojs/tailwind";
-
-// Import the Vercel adapter
-import vercel from '@astrojs/vercel';
-
-// https://astro.build/config
 export default defineConfig({
-  site: "https://positivustheme.vercel.app",
-  integrations: [tailwind()],
-  output: 'server',
-  adapter: vercel(),
+  site: 'https://karun-hub.github.io',
+  base: '/OutBox/',          // REQUIRED for your repo
+  output: 'static',          // REQUIRED for GitHub Pages
+  integrations: [tailwind(), react()],
 });

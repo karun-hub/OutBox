@@ -1,0 +1,363 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-ouamjn2i> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><!-- iOS 
+  <link rel="apple-touch-icon" sizes="256x256" href="/path/to/your/icon.png" />
+  --><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.13.5"><title>Our Course Catalog</title><meta name="description"><!-- SEO --><link rel="canonical" href="https://karun-hub.github.io/courses/"><!-- Open Graph --><meta property="og:site_name" content="Site Name"><meta property="og:title" content="Our Course Catalog"><meta property="og:description"><meta property="og:url" content="https://karun-hub.github.io/courses/"><meta property="og:image" content="/los.png"><meta property="og:image:url" content="/los.png"><meta property="og:image:secure_url" content="/los.png"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="600"><meta property="og:image:alt" content="OutOBox Logo"><!-- Twitter --><meta name="twitter:title" content="Our Course Catalog"><meta name="twitter:description"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="/los.png"><meta name="twitter:image:alt" content="Our Course Catalog"><!-- Using environment domain --><meta name="twitter:domain" content="https://karun-hub.github.io"><!-- JSON LD --><script type="application/ld+json">
+      {
+      "@context": "https://schema.org/",
+      "@type": "WebSite",
+      "name": "OutOBox",
+      "url": "https://karun-hub.github.io"
+      }
+    </script><!-- Preconnect fonts, images... --><link rel="stylesheet" href="/_astro/about.DBlQxTAd.css"></head><script type="module" src="/_astro/MainLayout.astro_astro_type_script_index_0_lang.DZe-9zfI.js"></script><body class="bg-white font-grotesk" data-astro-cid-ouamjn2i> <main data-astro-cid-ouamjn2i> <div class="mt-20"> <nav class="w-full top-0 left-0 z-50 fixed bg-white"> <header class="flex flex-col lg:flex-row justify-between items-center my-5 px-6 md:px-32">  <div class="flex w-full lg:w-auto items-center justify-between"> <a href="" class="flex items-center space-x-3 rtl:space-x-reverse"> <img src="los.png" width="100px" alt="sd"> </a> <div class="block lg:hidden"> <div id="menu-icon" class="w-8 h-8 text-black cursor-pointer"> <!-- Open (hamburger) icon --> <svg id="open-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-8 h-8"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> </svg> <!-- Close (X) icon --> <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-8 h-8 hidden"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path> </svg> </div> </div> </div> <nav class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0" id="menu-items"> <ul class="font-medium flex flex-col p-4 lg:p-0 mt-4 border rounded-lg lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0"> <li> <a href="/" class="mobile-nav-link block py-2 px-3 text-black rounded lg:bg-transparent lg:p-0" data-close-menu="true"> Home </a> </li><li> <a href="/courses" class="mobile-nav-link block py-2 px-3 text-black rounded lg:bg-transparent lg:p-0" data-close-menu="true"> Courses </a> </li><li> <a href="/certifications" class="mobile-nav-link block py-2 px-3 text-black rounded lg:bg-transparent lg:p-0" data-close-menu="true"> Certifications </a> </li><li> <a href="/about" class="mobile-nav-link block py-2 px-3 text-black rounded lg:bg-transparent lg:p-0" data-close-menu="true"> About Us </a> </li><li> <a href="/contact" class="mobile-nav-link block py-2 px-3 text-black rounded lg:bg-transparent lg:p-0" data-close-menu="true"> Contact Us </a> </li> <div class="lg:hidden flex items-center justify-center mt-3 gap-4"> <a class="mobile-nav-link px-9 py-5 rounded-2xl border border-zinc-900 bg-white hover:bg-black text-black hover:text-white inline-flex" href="/contact" data-close-menu="true"> <h2 class="text-center text-xl font-normal leading-7">Request a quote</h2> </a> </div> </ul> </nav>  <script>(function(){const closeOnClick = false;
+
+["DOMContentLoaded", "astro:after-swap"].forEach((event) => {
+  document.addEventListener(event, addListeners);
+});
+
+// Function to clone and replace elements
+function cloneAndReplace(element) {
+  const clone = element.cloneNode(true);
+  element.parentNode.replaceChild(clone, element);
+}
+
+function addListeners() {
+  // Clean up existing listeners
+  const oldMenuButton = document.getElementById("astronav-menu");
+  if (oldMenuButton) {
+    cloneAndReplace(oldMenuButton);
+  }
+
+  const oldDropdownMenus = document.querySelectorAll(".astronav-dropdown");
+  oldDropdownMenus.forEach((menu) => {
+    cloneAndReplace(menu);
+  });
+
+  // Mobile nav toggle
+  const menuButton = document.getElementById("astronav-menu");
+  menuButton && menuButton.addEventListener("click", toggleMobileNav);
+
+  // Dropdown menus
+  const dropdownMenus = document.querySelectorAll(".astronav-dropdown");
+  dropdownMenus.forEach((menu) => {
+    const button = menu.querySelector("button");
+    button &&
+      button.addEventListener("click", (event) =>
+        toggleDropdownMenu(event, menu, dropdownMenus)
+      );
+
+    // Handle Submenu Dropdowns
+    const dropDownSubmenus = menu.querySelectorAll(
+      ".astronav-dropdown-submenu"
+    );
+
+    dropDownSubmenus.forEach((submenu) => {
+      const submenuButton = submenu.querySelector("button");
+      submenuButton &&
+        submenuButton.addEventListener("click", (event) => {
+          event.stopImmediatePropagation();
+          toggleSubmenuDropdown(event, submenu);
+        });
+    });
+  });
+
+  // Clicking away from dropdown will remove the dropdown class
+  document.addEventListener("click", closeAllDropdowns);
+
+  if (closeOnClick) {
+    handleCloseOnClick();
+  }
+}
+
+function toggleMobileNav() {
+  [...document.querySelectorAll(".astronav-toggle")].forEach((el) => {
+    el.classList.toggle("hidden");
+  });
+}
+
+function toggleDropdownMenu(event, menu, dropdownMenus) {
+  toggleMenu(menu);
+
+  // Close one dropdown when selecting another
+  Array.from(dropdownMenus)
+    .filter((el) => el !== menu && !menu.contains(el))
+    .forEach(closeMenu);
+
+  event.stopPropagation();
+}
+
+function toggleSubmenuDropdown(event, submenu) {
+  event.stopPropagation();
+  toggleMenu(submenu);
+
+  // Close sibling submenus at the same nesting level
+  const siblingSubmenus = submenu
+    .closest(".astronav-dropdown")
+    .querySelectorAll(".astronav-dropdown-submenu");
+  Array.from(siblingSubmenus)
+    .filter((el) => el !== submenu && !submenu.contains(el))
+    .forEach(closeMenu);
+}
+
+function closeAllDropdowns(event) {
+  const dropdownMenus = document.querySelectorAll(".dropdown-toggle");
+  const dropdownParent = document.querySelectorAll(
+    ".astronav-dropdown, .astronav-dropdown-submenu"
+  );
+  const isButtonInsideDropdown = [
+    ...document.querySelectorAll(
+      `.astronav-dropdown button, .astronav-dropdown label, .astronav-dropdown input,
+	  .astronav-dropdown-submenu button, .astronav-dropdown-submenu label, .astronav-dropdown-submenu input,
+	  #astronav-menu`
+    ),
+  ].some((button) => button.contains(event.target));
+  if (!isButtonInsideDropdown) {
+    dropdownMenus.forEach((d) => {
+      // console.log("I ran", d);
+      // if (!d.contains(event.target)) {
+      d.classList.remove("open");
+      d.removeAttribute("open");
+      d.classList.add("hidden");
+      // }
+    });
+    dropdownParent.forEach((d) => {
+      d.classList.remove("open");
+      d.removeAttribute("open");
+      d.setAttribute("aria-expanded", "false");
+    });
+  }
+}
+
+function toggleMenu(menu) {
+  menu.classList.toggle("open");
+  const expanded = menu.getAttribute("aria-expanded") === "true";
+  menu.setAttribute("aria-expanded", expanded ? "false" : "true");
+  menu.hasAttribute("open")
+    ? menu.removeAttribute("open")
+    : menu.setAttribute("open", "");
+
+  const dropdownToggle = menu.querySelector(".dropdown-toggle");
+  const dropdownExpanded = dropdownToggle.getAttribute("aria-expanded");
+  dropdownToggle.classList.toggle("hidden");
+  dropdownToggle.setAttribute(
+    "aria-expanded",
+    dropdownExpanded === "true" ? "false" : "true"
+  );
+}
+
+function closeMenu(menu) {
+  // console.log("closing", menu);
+  menu.classList.remove("open");
+  menu.removeAttribute("open");
+  menu.setAttribute("aria-expanded", "false");
+  const dropdownToggles = menu.querySelectorAll(".dropdown-toggle");
+  dropdownToggles.forEach((toggle) => {
+    toggle.classList.add("hidden");
+    toggle.setAttribute("aria-expanded", "false");
+  });
+}
+
+function handleCloseOnClick() {
+  const navMenuItems = document.querySelector(".astronav-items");
+  const navToggle = document.getElementById("astronav-menu");
+  const navLink = navMenuItems && navMenuItems.querySelectorAll("a");
+
+  const MenuIcons = navToggle.querySelectorAll(".astronav-toggle");
+
+  navLink &&
+    navLink.forEach((item) => {
+      item.addEventListener("click", () => {
+        navMenuItems?.classList.add("hidden");
+        MenuIcons.forEach((el) => {
+          el.classList.toggle("hidden");
+        });
+      });
+    });
+}
+})();</script> <div> <div class="hidden lg:flex items-center gap-4"> <a class="px-9 py-5 rounded-2xl border border-zinc-900 bg-white hover:bg-black text-black hover:text-white inline-flex" href="/contact"> <h2 class="text-center text-xl font-normal leading-7">Request a quote</h2> </a> </div> </div> </header> </nav> </div> <script>
+  // Get references to the menu icon, open/close icons, and menu items
+  const menuIcon = document.getElementById('menu-icon');
+  const openIcon = document.getElementById('open-icon');
+  const closeIcon = document.getElementById('close-icon');
+  const menuItems = document.getElementById('menu-items');
+  const closeMenuItems = document.querySelectorAll('[data-close-menu="true"]');  // Select all items with the 'data-close-menu' attribute
+
+  // Toggle the menu visibility and icon when the menu icon is clicked
+  menuIcon.addEventListener('click', () => {
+    menuItems.classList.toggle('hidden');  // Toggle the 'hidden' class on the menu
+
+    // Toggle between open and close icons
+    openIcon.classList.toggle('hidden');
+    closeIcon.classList.toggle('hidden');
+  });
+
+  // Close the menu when any item is clicked
+  closeMenuItems.forEach(item => {
+    item.addEventListener('click', () => {
+      menuItems.classList.add('hidden');  // Add the 'hidden' class to hide the menu
+      openIcon.classList.remove('hidden');  // Show the open (hamburger) icon
+      closeIcon.classList.add('hidden');  // Hide the close (X) icon
+    });
+  });
+</script>  <main class="space-y-20"> <!-- Header Section with Different Layout --> <div class="py-16 px-4 mx-auto max-w-screen-xl lg:py-24 lg:px-6"> <div class="grid md:grid-cols-2 gap-10 items-center mb-20"> <!-- Left Side - Text --> <div class="scroll-animate"> <div class="flex items-center gap-3 mb-6"> <div class="w-1 h-8 bg-orange-500 rounded-full"></div> <span class="text-orange-500 font-semibold uppercase tracking-wide text-sm">Our Courses</span> </div> <h1 class="mb-4 text-4xl lg:text-5xl tracking-tight font-extrabold text-gray-900">
+Master Cybersecurity Skills
+</h1> <p class="mb-6 font-light text-gray-600 sm:text-lg leading-relaxed">
+Structured learning paths from beginner to advanced level with hybrid online and offline training. Equip yourself with industry-recognized expertise and practical knowledge.
+</p> <a href="/certifications"> <button class="inline-flex items-center px-8 py-4 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors font-semibold">
+Explore Certifications
+<svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path> </svg> </button> </a> </div> <!-- Right Side - Quote/Stats --> <div class="scroll-animate" style="animation-delay: 0.1s;"> <div class="rounded-[45px] border border-dark shadow-[0px_5px_0px_#191a23]"> <div class="p-8 lg:p-10"> <div class="mb-6"> <svg class="w-12 h-12 text-orange-500" fill="currentColor" viewBox="0 0 24 24"> <path d="M3 21c3 0 7-1 7-8V5c0-1.25-4.25-2.25-7-2-2.75 0-7 .75-7 2v11c0 1 0 4 3 4s4-1 4-4V8c1.25 0 4 .75 4 4"></path> </svg> </div> <p class="text-xl lg:text-2xl font-semibold text-gray-900 mb-4">
+"Invest in your future with cybersecurity expertise. Our comprehensive courses provide the skills you need to succeed in today's digital landscape."
+</p> <div class="flex gap-4 mt-8 pt-6 border-t border-gray-200"> <div> <div class="text-3xl font-bold text-orange-500">500+</div> <p class="text-sm text-gray-600">Students Trained</p> </div> <div> <div class="text-3xl font-bold text-orange-500">95%</div> <p class="text-sm text-gray-600">Satisfaction Rate</p> </div> <div> <div class="text-3xl font-bold text-orange-500">10+</div> <p class="text-sm text-gray-600">Expert Courses</p> </div> </div> </div> </div> </div> </div> <!-- Courses Section --> <div class="space-y-8"> <div class="mb-12"> <h2 class="text-3xl font-bold text-gray-900 flex items-center gap-3"> <span class="w-1 h-8 bg-orange-500 rounded-full"></span>
+Featured Courses
+</h2> </div> <div class="space-y-8 lg:grid lg:grid-cols-2 sm:gap-6 xl:gap-8 lg:space-y-0"> <div class="scroll-animate" style="animation-delay: 0s;"> <div class="rounded-[45px] border border-dark shadow-[0px_5px_0px_#191a23]"> <div class="flex flex-col h-full"> <!-- Course Header --> <div class="course-header p-6 flex justify-between items-start gap-4 cursor-pointer hover:text-orange-500 transition-colors" data-toggle="course-0"> <div class="flex-1"> <div class="flex flex-wrap gap-2 mb-3"> <span class="level-badge level-beginner"> Beginner </span> <span class="text-xs font-medium text-gray-500">1 Month • 40 hours</span> </div> <h3 class="text-xl lg:text-2xl font-bold text-gray-900 mb-2"> Introduction to Cybersecurity </h3> <p class="text-gray-700 text-sm"> Dive into the fundamentals of cybersecurity with this beginner-friendly course covering essential concepts, common threats, and protection techniques. </p> </div> <svg class="w-6 h-6 text-orange-500 toggle-icon flex-shrink-0 mt-1" data-toggle="course-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path> </svg> </div> <!-- Course Content --> <div id="course-0" class="course-content border-t border-gray-200"> <div class="p-6 space-y-4"> <div> <h4 class="font-semibold text-gray-900 mb-2 flex items-center gap-2"> <span class="w-1 h-4 bg-orange-500 rounded"></span>
+Course Description
+</h4> <p class="text-sm text-gray-700">This course is designed for beginners to dive into the fundamentals of cybersecurity. Students will learn about the importance of cybersecurity, basic terminology, common threats, and essential techniques to safeguard information. A great starting point for anyone new to the field!</p> </div> <div> <h4 class="font-semibold text-gray-900 mb-2 flex items-center gap-2"> <span class="w-1 h-4 bg-orange-500 rounded"></span>
+Learning Outcomes
+</h4> <ul class="space-y-2"> <li class="flex items-start gap-2"> <div class="w-1.5 h-1.5 rounded-full bg-orange-500 mt-1.5 flex-shrink-0"></div> <span class="text-sm text-gray-700">Understand basic cybersecurity concepts and terms</span> </li><li class="flex items-start gap-2"> <div class="w-1.5 h-1.5 rounded-full bg-orange-500 mt-1.5 flex-shrink-0"></div> <span class="text-sm text-gray-700">Learn about various types of cyber threats and attacks</span> </li><li class="flex items-start gap-2"> <div class="w-1.5 h-1.5 rounded-full bg-orange-500 mt-1.5 flex-shrink-0"></div> <span class="text-sm text-gray-700">Gain knowledge of basic security measures for protecting devices and networks</span> </li><li class="flex items-start gap-2"> <div class="w-1.5 h-1.5 rounded-full bg-orange-500 mt-1.5 flex-shrink-0"></div> <span class="text-sm text-gray-700">Build a foundation for more advanced cybersecurity courses</span> </li> </ul> </div> <div> <h4 class="font-semibold text-gray-900 mb-2 flex items-center gap-2"> <span class="w-1 h-4 bg-orange-500 rounded"></span>
+Schedule
+</h4> <div class="bg-orange-50 rounded p-3"> <p class="text-xs text-gray-700 mb-1">Saturday &amp; Sunday: 10:00 AM - 3:00 PM (5 hours each day)</p><p class="text-xs text-gray-700 mb-1">Monday to Thursday: 8:00 PM - 9:00 PM (1 hour each day)</p><p class="text-xs text-gray-700 mb-1">20 offline + 20 online hours</p> </div> </div> <a href="/contact"> <button class="w-full inline-flex items-center justify-center px-6 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors font-semibold text-sm mt-4">
+Contact Now
+<svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path> </svg> </button> </a> </div> </div> </div> </div> </div><div class="scroll-animate" style="animation-delay: 0.08s;"> <div class="rounded-[45px] border border-dark shadow-[0px_5px_0px_#191a23]"> <div class="flex flex-col h-full"> <!-- Course Header --> <div class="course-header p-6 flex justify-between items-start gap-4 cursor-pointer hover:text-orange-500 transition-colors" data-toggle="course-1"> <div class="flex-1"> <div class="flex flex-wrap gap-2 mb-3"> <span class="level-badge level-beginner"> Beginner </span> <span class="text-xs font-medium text-gray-500">1 Month • 40 hours</span> </div> <h3 class="text-xl lg:text-2xl font-bold text-gray-900 mb-2"> Network Security Basics </h3> <p class="text-gray-700 text-sm"> Master the fundamentals of network security including firewalls, encryption, VPNs, and essential tools to protect network infrastructure. </p> </div> <svg class="w-6 h-6 text-orange-500 toggle-icon flex-shrink-0 mt-1" data-toggle="course-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path> </svg> </div> <!-- Course Content --> <div id="course-1" class="course-content border-t border-gray-200"> <div class="p-6 space-y-4"> <div> <h4 class="font-semibold text-gray-900 mb-2 flex items-center gap-2"> <span class="w-1 h-4 bg-orange-500 rounded"></span>
+Course Description
+</h4> <p class="text-sm text-gray-700">This course covers the basics of securing networks. Students will explore firewalls, encryption, VPNs, and other tools used to protect network infrastructure. By the end of the course, students will be able to apply fundamental network security practices to safeguard data and communications.</p> </div> <div> <h4 class="font-semibold text-gray-900 mb-2 flex items-center gap-2"> <span class="w-1 h-4 bg-orange-500 rounded"></span>
+Learning Outcomes
+</h4> <ul class="space-y-2"> <li class="flex items-start gap-2"> <div class="w-1.5 h-1.5 rounded-full bg-orange-500 mt-1.5 flex-shrink-0"></div> <span class="text-sm text-gray-700">Understand the importance of network security in the modern digital world</span> </li><li class="flex items-start gap-2"> <div class="w-1.5 h-1.5 rounded-full bg-orange-500 mt-1.5 flex-shrink-0"></div> <span class="text-sm text-gray-700">Learn about firewalls, VPNs, encryption, and other network security tools</span> </li><li class="flex items-start gap-2"> <div class="w-1.5 h-1.5 rounded-full bg-orange-500 mt-1.5 flex-shrink-0"></div> <span class="text-sm text-gray-700">Gain practical knowledge of securing personal and organizational networks</span> </li><li class="flex items-start gap-2"> <div class="w-1.5 h-1.5 rounded-full bg-orange-500 mt-1.5 flex-shrink-0"></div> <span class="text-sm text-gray-700">Be prepared for more advanced network security courses</span> </li> </ul> </div> <div> <h4 class="font-semibold text-gray-900 mb-2 flex items-center gap-2"> <span class="w-1 h-4 bg-orange-500 rounded"></span>
+Schedule
+</h4> <div class="bg-orange-50 rounded p-3"> <p class="text-xs text-gray-700 mb-1">Saturday &amp; Sunday: 10:00 AM - 3:00 PM (5 hours each day)</p><p class="text-xs text-gray-700 mb-1">Monday to Thursday: 8:00 PM - 9:00 PM (1 hour each day)</p><p class="text-xs text-gray-700 mb-1">20 offline + 20 online hours</p> </div> </div> <a href="/contact"> <button class="w-full inline-flex items-center justify-center px-6 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors font-semibold text-sm mt-4">
+Contact Now
+<svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path> </svg> </button> </a> </div> </div> </div> </div> </div><div class="scroll-animate" style="animation-delay: 0.16s;"> <div class="rounded-[45px] border border-dark shadow-[0px_5px_0px_#191a23]"> <div class="flex flex-col h-full"> <!-- Course Header --> <div class="course-header p-6 flex justify-between items-start gap-4 cursor-pointer hover:text-orange-500 transition-colors" data-toggle="course-2"> <div class="flex-1"> <div class="flex flex-wrap gap-2 mb-3"> <span class="level-badge level-intermediate"> Intermediate </span> <span class="text-xs font-medium text-gray-500">1 Month • 40 hours</span> </div> <h3 class="text-xl lg:text-2xl font-bold text-gray-900 mb-2"> Ethical Hacking Essentials </h3> <p class="text-gray-700 text-sm"> Learn the ethical hacker&#39;s mindset and penetration testing tools to identify and improve system security vulnerabilities. </p> </div> <svg class="w-6 h-6 text-orange-500 toggle-icon flex-shrink-0 mt-1" data-toggle="course-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path> </svg> </div> <!-- Course Content --> <div id="course-2" class="course-content border-t border-gray-200"> <div class="p-6 space-y-4"> <div> <h4 class="font-semibold text-gray-900 mb-2 flex items-center gap-2"> <span class="w-1 h-4 bg-orange-500 rounded"></span>
+Course Description
+</h4> <p class="text-sm text-gray-700">In this intermediate course, students will learn the ethical hacker&#39;s mindset and various tools used for penetration testing. From vulnerability assessments to exploiting weaknesses, this course provides the skills needed to test and improve system security ethically.</p> </div> <div> <h4 class="font-semibold text-gray-900 mb-2 flex items-center gap-2"> <span class="w-1 h-4 bg-orange-500 rounded"></span>
+Learning Outcomes
+</h4> <ul class="space-y-2"> <li class="flex items-start gap-2"> <div class="w-1.5 h-1.5 rounded-full bg-orange-500 mt-1.5 flex-shrink-0"></div> <span class="text-sm text-gray-700">Understand the ethical hacking process and methodologies</span> </li><li class="flex items-start gap-2"> <div class="w-1.5 h-1.5 rounded-full bg-orange-500 mt-1.5 flex-shrink-0"></div> <span class="text-sm text-gray-700">Gain hands-on experience using tools like Kali Linux and Metasploit</span> </li><li class="flex items-start gap-2"> <div class="w-1.5 h-1.5 rounded-full bg-orange-500 mt-1.5 flex-shrink-0"></div> <span class="text-sm text-gray-700">Learn how to conduct vulnerability assessments and penetration tests</span> </li><li class="flex items-start gap-2"> <div class="w-1.5 h-1.5 rounded-full bg-orange-500 mt-1.5 flex-shrink-0"></div> <span class="text-sm text-gray-700">Develop a strong foundation for advanced penetration testing techniques</span> </li> </ul> </div> <div> <h4 class="font-semibold text-gray-900 mb-2 flex items-center gap-2"> <span class="w-1 h-4 bg-orange-500 rounded"></span>
+Schedule
+</h4> <div class="bg-orange-50 rounded p-3"> <p class="text-xs text-gray-700 mb-1">Saturday &amp; Sunday: 10:00 AM - 3:00 PM (5 hours each day)</p><p class="text-xs text-gray-700 mb-1">Monday to Thursday: 8:00 PM - 9:00 PM (1 hour each day)</p><p class="text-xs text-gray-700 mb-1">20 offline + 20 online hours</p> </div> </div> <a href="/contact"> <button class="w-full inline-flex items-center justify-center px-6 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors font-semibold text-sm mt-4">
+Contact Now
+<svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path> </svg> </button> </a> </div> </div> </div> </div> </div><div class="scroll-animate" style="animation-delay: 0.24s;"> <div class="rounded-[45px] border border-dark shadow-[0px_5px_0px_#191a23]"> <div class="flex flex-col h-full"> <!-- Course Header --> <div class="course-header p-6 flex justify-between items-start gap-4 cursor-pointer hover:text-orange-500 transition-colors" data-toggle="course-3"> <div class="flex-1"> <div class="flex flex-wrap gap-2 mb-3"> <span class="level-badge level-intermediate"> Intermediate </span> <span class="text-xs font-medium text-gray-500">1 Month • 40 hours</span> </div> <h3 class="text-xl lg:text-2xl font-bold text-gray-900 mb-2"> Cryptography Essentials </h3> <p class="text-gray-700 text-sm"> Explore cryptographic techniques including encryption, hashing, and digital signatures to secure communications and protect data. </p> </div> <svg class="w-6 h-6 text-orange-500 toggle-icon flex-shrink-0 mt-1" data-toggle="course-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path> </svg> </div> <!-- Course Content --> <div id="course-3" class="course-content border-t border-gray-200"> <div class="p-6 space-y-4"> <div> <h4 class="font-semibold text-gray-900 mb-2 flex items-center gap-2"> <span class="w-1 h-4 bg-orange-500 rounded"></span>
+Course Description
+</h4> <p class="text-sm text-gray-700">This course explores the essential techniques of cryptography used to secure communication and protect data. Learn how encryption, hashing, and digital signatures work, and how cryptography plays a critical role in modern security protocols.</p> </div> <div> <h4 class="font-semibold text-gray-900 mb-2 flex items-center gap-2"> <span class="w-1 h-4 bg-orange-500 rounded"></span>
+Learning Outcomes
+</h4> <ul class="space-y-2"> <li class="flex items-start gap-2"> <div class="w-1.5 h-1.5 rounded-full bg-orange-500 mt-1.5 flex-shrink-0"></div> <span class="text-sm text-gray-700">Understand how cryptography is used to secure digital communication</span> </li><li class="flex items-start gap-2"> <div class="w-1.5 h-1.5 rounded-full bg-orange-500 mt-1.5 flex-shrink-0"></div> <span class="text-sm text-gray-700">Learn about encryption algorithms, hashing, and key management</span> </li><li class="flex items-start gap-2"> <div class="w-1.5 h-1.5 rounded-full bg-orange-500 mt-1.5 flex-shrink-0"></div> <span class="text-sm text-gray-700">Be able to implement basic cryptographic solutions for security</span> </li><li class="flex items-start gap-2"> <div class="w-1.5 h-1.5 rounded-full bg-orange-500 mt-1.5 flex-shrink-0"></div> <span class="text-sm text-gray-700">Prepare for specialized cryptography topics in advanced courses</span> </li> </ul> </div> <div> <h4 class="font-semibold text-gray-900 mb-2 flex items-center gap-2"> <span class="w-1 h-4 bg-orange-500 rounded"></span>
+Schedule
+</h4> <div class="bg-orange-50 rounded p-3"> <p class="text-xs text-gray-700 mb-1">Saturday &amp; Sunday: 10:00 AM - 3:00 PM (5 hours each day)</p><p class="text-xs text-gray-700 mb-1">Monday to Thursday: 8:00 PM - 9:00 PM (1 hour each day)</p><p class="text-xs text-gray-700 mb-1">20 offline + 20 online hours</p> </div> </div> <a href="/contact"> <button class="w-full inline-flex items-center justify-center px-6 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors font-semibold text-sm mt-4">
+Contact Now
+<svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path> </svg> </button> </a> </div> </div> </div> </div> </div><div class="scroll-animate" style="animation-delay: 0.32s;"> <div class="rounded-[45px] border border-dark shadow-[0px_5px_0px_#191a23]"> <div class="flex flex-col h-full"> <!-- Course Header --> <div class="course-header p-6 flex justify-between items-start gap-4 cursor-pointer hover:text-orange-500 transition-colors" data-toggle="course-4"> <div class="flex-1"> <div class="flex flex-wrap gap-2 mb-3"> <span class="level-badge level-advanced"> Advanced </span> <span class="text-xs font-medium text-gray-500">1 Month • 40 hours</span> </div> <h3 class="text-xl lg:text-2xl font-bold text-gray-900 mb-2"> Advanced Penetration Testing </h3> <p class="text-gray-700 text-sm"> Master advanced penetration testing techniques, complex system exploitation, and modern defense bypass strategies. </p> </div> <svg class="w-6 h-6 text-orange-500 toggle-icon flex-shrink-0 mt-1" data-toggle="course-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path> </svg> </div> <!-- Course Content --> <div id="course-4" class="course-content border-t border-gray-200"> <div class="p-6 space-y-4"> <div> <h4 class="font-semibold text-gray-900 mb-2 flex items-center gap-2"> <span class="w-1 h-4 bg-orange-500 rounded"></span>
+Course Description
+</h4> <p class="text-sm text-gray-700">This advanced course focuses on mastering penetration testing techniques, from exploiting vulnerabilities in complex systems to bypassing modern defenses. Students will gain hands-on experience with industry-leading tools and strategies used by professional penetration testers.</p> </div> <div> <h4 class="font-semibold text-gray-900 mb-2 flex items-center gap-2"> <span class="w-1 h-4 bg-orange-500 rounded"></span>
+Learning Outcomes
+</h4> <ul class="space-y-2"> <li class="flex items-start gap-2"> <div class="w-1.5 h-1.5 rounded-full bg-orange-500 mt-1.5 flex-shrink-0"></div> <span class="text-sm text-gray-700">Master advanced techniques used in penetration testing</span> </li><li class="flex items-start gap-2"> <div class="w-1.5 h-1.5 rounded-full bg-orange-500 mt-1.5 flex-shrink-0"></div> <span class="text-sm text-gray-700">Gain in-depth knowledge of vulnerability scanning and exploitation</span> </li><li class="flex items-start gap-2"> <div class="w-1.5 h-1.5 rounded-full bg-orange-500 mt-1.5 flex-shrink-0"></div> <span class="text-sm text-gray-700">Learn to exploit complex systems and bypass security mechanisms</span> </li><li class="flex items-start gap-2"> <div class="w-1.5 h-1.5 rounded-full bg-orange-500 mt-1.5 flex-shrink-0"></div> <span class="text-sm text-gray-700">Prepare for certifications like CEH and OSCP</span> </li> </ul> </div> <div> <h4 class="font-semibold text-gray-900 mb-2 flex items-center gap-2"> <span class="w-1 h-4 bg-orange-500 rounded"></span>
+Schedule
+</h4> <div class="bg-orange-50 rounded p-3"> <p class="text-xs text-gray-700 mb-1">Saturday &amp; Sunday: 10:00 AM - 3:00 PM (5 hours each day)</p><p class="text-xs text-gray-700 mb-1">Monday to Thursday: 8:00 PM - 9:00 PM (1 hour each day)</p><p class="text-xs text-gray-700 mb-1">20 offline + 20 online hours</p> </div> </div> <a href="/contact"> <button class="w-full inline-flex items-center justify-center px-6 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors font-semibold text-sm mt-4">
+Contact Now
+<svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path> </svg> </button> </a> </div> </div> </div> </div> </div> </div> </div> </div> </main> <style>
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  .scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+  }
+
+  .scroll-animate.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .level-badge {
+    display: inline-block;
+    padding: 0.375rem 0.875rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  .level-beginner {
+    background-color: #dcfce7;
+    color: #166534;
+  }
+
+  .level-intermediate {
+    background-color: #fef3c7;
+    color: #92400e;
+  }
+
+  .level-advanced {
+    background-color: #fee2e2;
+    color: #991b1b;
+  }
+
+  .course-header {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .course-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+  .course-content.expanded {
+    max-height: 1200px;
+  }
+
+  .toggle-icon {
+    transition: transform 0.3s ease;
+  }
+
+  .toggle-icon.rotated {
+    transform: rotate(180deg);
+  }
+</style> <script type="module">const r=new IntersectionObserver(e=>{e.forEach(t=>{t.isIntersecting&&t.target.classList.add("in-view")})},{threshold:.1});document.querySelectorAll(".scroll-animate").forEach(e=>{r.observe(e)});document.querySelectorAll(".course-header, .toggle-icon").forEach(e=>{e.addEventListener("click",function(){const t=this.getAttribute("data-toggle")||this.closest(".course-header")?.getAttribute("data-toggle"),o=this.closest(".flex.flex-col.h-full"),s=o?.querySelector(`#${t}`),c=o?.querySelector(".toggle-icon");s&&(s.classList.toggle("expanded"),c?.classList.toggle("rotated"))})});</script>  <footer class="relative overflow-hidden bg-white"> <div class="mx-auto max-w-6xl px-4 sm:px-6 relative z-10 my-11 pb-32">  <div class="grid gap-10 py-12 sm:grid-cols-12 border-t
+             [border-image:linear-gradient(to_right,transparent,var(--color-slate-200),transparent)1]">  <div class="space-y-4 sm:col-span-12 lg:col-span-4"> <img src="/los.png" alt="OutOBox Logo" class="h-20 w-auto"> <p class="text-sm text-gray-600">
+© OutOBox – All rights reserved.
+</p> </div>  <div class="space-y-3 sm:col-span-6 md:col-span-3 lg:col-span-2"> <h3 class="text-sm font-semibold">Company</h3> <ul class="space-y-2 text-sm"> <li><a class="text-gray-600 hover:text-gray-900" href="/about">About us</a></li> <li><a class="text-gray-600 hover:text-gray-900" href="/courses">Courses</a></li> <li><a class="text-gray-600 hover:text-gray-900" href="/certifications">Certifications</a></li> <li><a class="text-gray-600 hover:text-gray-900" href="/contact">Contact</a></li> </ul> </div> <div class="space-y-3 sm:col-span-6 md:col-span-3 lg:col-span-2"> <h3 class="text-sm font-semibold"> <a href="/#services" class="hover:text-gray-900">
+Services
+</a> </h3> <ul class="space-y-2 text-sm"> <li class="text-gray-600">Web Development</li> <li class="text-gray-600">Full Stack Apps</li> <li class="text-gray-600">SEO</li> <li class="text-gray-600">Cyber Security</li> </ul> </div>  <div class="space-y-3 sm:col-span-12 md:col-span-3 lg:col-span-2 lg:col-start-11"> <h3 class="text-sm font-semibold">Social</h3> <ul class="flex gap-4"> <!-- Twitter --> <!-- LinkedIn --> <li> <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" class="text-blue-600 hover:text-blue-700"> <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24"> <path d="M4.98 3.5C4.98 4.9 3.9 6 2.5 6S0 4.9 0 3.5 1.1 1 2.5 1 4.98 2.1 4.98 3.5ZM0 24h5V7H0v17ZM7.5 7h4.8v2.3h.1c.7-1.3 2.4-2.6 4.9-2.6 5.2 0 6.2 3.4 6.2 7.8V24h-5v-7.7c0-1.8 0-4.1-2.5-4.1s-2.9 1.9-2.9 4V24h-5V7Z"></path> </svg> </a> </li> <!-- GitHub --> <li> <a href="https://instagram.com/outobox_cyber_solutions" target="_blank" rel="noopener" aria-label="Instagram" class="text-pink-500 transition hover:text-pink-600"> <svg class="h-6 w-6 fill-current opacity-0.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> <path d="M7.75 2h8.5C19.55 2 22 4.45 22 7.75v8.5C22 19.55 19.55 22 16.25 22h-8.5C4.45 22 2 19.55 2 16.25v-8.5C2 4.45 4.45 2 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm5.25-.88a1.13 1.13 0 1 1-2.26 0 1.13 1.13 0 0 1 2.26 0Z"></path> </svg> </a> </li> </ul> </div> </div> </div>  <div class="absolute inset-x-0 bottom-[-20px] h-[290px] pointer-events-none"> <div class="pointer-events-none font-inter absolute left-1/2 -translate-x-1/2 text-center text-[358px] font-bold leading-none select-none text-gray bg-clip-text bg-gradient-to-b from-gray-200 via-gray-100 to-gray-300/60 [mask-image:linear-gradient(to_top,white_0%,transparent)]
+    [-webkit-mask-image:linear-gradient(to_top,white_0%,transparent)]">
+OutOBox
+</div> <div class="absolute inset-x-0 bottom-[-40%] flex justify-center"> <div class="h-72 w-72 rounded-full bg-blue-600 blur-[120px] opacity-40"></div> </div> </div> </footer> </main> </body></html>

@@ -1,35 +1,22 @@
 ---
-import { Image } from "astro:assets";
-import s1 from "../../assets/company/company-logo1.svg";
-import s2 from "../../assets/company/company-logo2.svg";
-import s3 from "../../assets/company/company-logo3.svg";
-import s4 from "../../assets/company/company-logo4.svg";
-import s5 from "../../assets/company/company-logo5.svg";
-import s6 from "../../assets/company/company-logo6.svg";
+import s2 from "../../assets/company/sed.png";
+import s3 from "../../assets/company/paris.png";
+import s4 from "../../assets/company/tang.png";
+import s5 from "../../assets/company/ben.png";
+import s6 from "../../assets/company/good.png";
 import Section from "./Section.astro";
+import SponsorsCarousel from "./SponsorsCarousel";
 
 const sponsors = [
-  { logo: s6, alt: "Amazon logo" },
-  { logo: s5, alt: "Dribble logo" },
-  { logo: s4, alt: "HubSpot logo" },
-  { logo: s3, alt: "Notion logo" },
-  { logo: s2, alt: "Netflix logo" },
-  { logo: s1, alt: "Zoom logo" },
+  { logo: s5.src, alt: "benoy", size: "h-20" },
+  { logo: s4.src, alt: "tand", larger: true },
+  { logo: s3.src, alt: "paris logo", larger: true },
+  { logo: s2.src, alt: "sed logo", larger: true },
+  { logo: s6.src, alt: "Goodwill logo", larger: true, size:"h-20" },
+
 ];
 ---
 
 <Section id="sponsors">
-  <div class="flex-row items-center">
-  <div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6">
-    {
-      sponsors.map((sponsor) => {
-        return (
-          <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
-            <Image src={sponsor.logo} class="h-12 w-auto mx-auto" alt={sponsor.alt} loading="lazy" />
-          </div>
-        );
-      })
-    }
-  </div>
-  </div> 
+  <SponsorsCarousel sponsors={sponsors} client:load />
 </Section>

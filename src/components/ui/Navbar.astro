@@ -2,14 +2,15 @@
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
 const menuitems = [
-  { href: '/about', label: 'About us' },
-  { href: '/services', label: 'Services' },
-  { href: '/#cases', label: 'Use Cases' },
-  { href: '/pricing', label: 'Pricing' },
-  { href: '/articles', label: 'Blog'},
+  { href: '/', label: 'Home' },
+  { href: '/courses', label: 'Courses' },
+  { href: '/certifications', label: 'Certifications' },
+  { href: '/about', label: 'About Us' },
+  { href: '/contact', label: 'Contact Us'},
+
 ];
 
-const navButton = { href: 'https://github.com/manulthanura/Positivus', label: 'Request a quote' };
+const navButton = { href: '/contact', label: 'Request a quote' };
 ---
 
 <div class="mt-20">
@@ -17,8 +18,8 @@ const navButton = { href: 'https://github.com/manulthanura/Positivus', label: 'R
     <header class="flex flex-col lg:flex-row justify-between items-center my-5 px-6 md:px-32">
       <Astronav>
         <div class="flex w-full lg:w-auto items-center justify-between">
-          <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="/Logo.svg" class="h-8" alt="Logo" />
+          <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="los.png" width='100px' alt="sd" />
           </a>
           <div class="block lg:hidden">
             <div id="menu-icon" class="w-8 h-8 text-black cursor-pointer">

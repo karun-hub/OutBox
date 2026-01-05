@@ -1,0 +1,208 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-ouamjn2i> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><!-- iOS 
+  <link rel="apple-touch-icon" sizes="256x256" href="/path/to/your/icon.png" />
+  --><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.13.5"><title>404</title><meta name="description"><!-- SEO --><link rel="canonical" href="https://karun-hub.github.io/404/"><!-- Open Graph --><meta property="og:site_name" content="Site Name"><meta property="og:title" content="404"><meta property="og:description"><meta property="og:url" content="https://karun-hub.github.io/404/"><meta property="og:image" content="/los.png"><meta property="og:image:url" content="/los.png"><meta property="og:image:secure_url" content="/los.png"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="600"><meta property="og:image:alt" content="OutOBox Logo"><!-- Twitter --><meta name="twitter:title" content="404"><meta name="twitter:description"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="/los.png"><meta name="twitter:image:alt" content="404"><!-- Using environment domain --><meta name="twitter:domain" content="https://karun-hub.github.io"><!-- JSON LD --><script type="application/ld+json">
+      {
+      "@context": "https://schema.org/",
+      "@type": "WebSite",
+      "name": "OutOBox",
+      "url": "https://karun-hub.github.io"
+      }
+    </script><!-- Preconnect fonts, images... --><link rel="stylesheet" href="/_astro/about.DBlQxTAd.css"></head><script type="module" src="/_astro/MainLayout.astro_astro_type_script_index_0_lang.DZe-9zfI.js"></script><body class="bg-white font-grotesk" data-astro-cid-ouamjn2i> <main data-astro-cid-ouamjn2i> <div class="mt-20"> <nav class="w-full top-0 left-0 z-50 fixed bg-white"> <header class="flex flex-col lg:flex-row justify-between items-center my-5 px-6 md:px-32">  <div class="flex w-full lg:w-auto items-center justify-between"> <a href="" class="flex items-center space-x-3 rtl:space-x-reverse"> <img src="los.png" width="100px" alt="sd"> </a> <div class="block lg:hidden"> <div id="menu-icon" class="w-8 h-8 text-black cursor-pointer"> <!-- Open (hamburger) icon --> <svg id="open-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-8 h-8"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> </svg> <!-- Close (X) icon --> <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-8 h-8 hidden"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path> </svg> </div> </div> </div> <nav class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0" id="menu-items"> <ul class="font-medium flex flex-col p-4 lg:p-0 mt-4 border rounded-lg lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0"> <li> <a href="/" class="mobile-nav-link block py-2 px-3 text-black rounded lg:bg-transparent lg:p-0" data-close-menu="true"> Home </a> </li><li> <a href="/courses" class="mobile-nav-link block py-2 px-3 text-black rounded lg:bg-transparent lg:p-0" data-close-menu="true"> Courses </a> </li><li> <a href="/certifications" class="mobile-nav-link block py-2 px-3 text-black rounded lg:bg-transparent lg:p-0" data-close-menu="true"> Certifications </a> </li><li> <a href="/about" class="mobile-nav-link block py-2 px-3 text-black rounded lg:bg-transparent lg:p-0" data-close-menu="true"> About Us </a> </li><li> <a href="/contact" class="mobile-nav-link block py-2 px-3 text-black rounded lg:bg-transparent lg:p-0" data-close-menu="true"> Contact Us </a> </li> <div class="lg:hidden flex items-center justify-center mt-3 gap-4"> <a class="mobile-nav-link px-9 py-5 rounded-2xl border border-zinc-900 bg-white hover:bg-black text-black hover:text-white inline-flex" href="/contact" data-close-menu="true"> <h2 class="text-center text-xl font-normal leading-7">Request a quote</h2> </a> </div> </ul> </nav>  <script>(function(){const closeOnClick = false;
+
+["DOMContentLoaded", "astro:after-swap"].forEach((event) => {
+  document.addEventListener(event, addListeners);
+});
+
+// Function to clone and replace elements
+function cloneAndReplace(element) {
+  const clone = element.cloneNode(true);
+  element.parentNode.replaceChild(clone, element);
+}
+
+function addListeners() {
+  // Clean up existing listeners
+  const oldMenuButton = document.getElementById("astronav-menu");
+  if (oldMenuButton) {
+    cloneAndReplace(oldMenuButton);
+  }
+
+  const oldDropdownMenus = document.querySelectorAll(".astronav-dropdown");
+  oldDropdownMenus.forEach((menu) => {
+    cloneAndReplace(menu);
+  });
+
+  // Mobile nav toggle
+  const menuButton = document.getElementById("astronav-menu");
+  menuButton && menuButton.addEventListener("click", toggleMobileNav);
+
+  // Dropdown menus
+  const dropdownMenus = document.querySelectorAll(".astronav-dropdown");
+  dropdownMenus.forEach((menu) => {
+    const button = menu.querySelector("button");
+    button &&
+      button.addEventListener("click", (event) =>
+        toggleDropdownMenu(event, menu, dropdownMenus)
+      );
+
+    // Handle Submenu Dropdowns
+    const dropDownSubmenus = menu.querySelectorAll(
+      ".astronav-dropdown-submenu"
+    );
+
+    dropDownSubmenus.forEach((submenu) => {
+      const submenuButton = submenu.querySelector("button");
+      submenuButton &&
+        submenuButton.addEventListener("click", (event) => {
+          event.stopImmediatePropagation();
+          toggleSubmenuDropdown(event, submenu);
+        });
+    });
+  });
+
+  // Clicking away from dropdown will remove the dropdown class
+  document.addEventListener("click", closeAllDropdowns);
+
+  if (closeOnClick) {
+    handleCloseOnClick();
+  }
+}
+
+function toggleMobileNav() {
+  [...document.querySelectorAll(".astronav-toggle")].forEach((el) => {
+    el.classList.toggle("hidden");
+  });
+}
+
+function toggleDropdownMenu(event, menu, dropdownMenus) {
+  toggleMenu(menu);
+
+  // Close one dropdown when selecting another
+  Array.from(dropdownMenus)
+    .filter((el) => el !== menu && !menu.contains(el))
+    .forEach(closeMenu);
+
+  event.stopPropagation();
+}
+
+function toggleSubmenuDropdown(event, submenu) {
+  event.stopPropagation();
+  toggleMenu(submenu);
+
+  // Close sibling submenus at the same nesting level
+  const siblingSubmenus = submenu
+    .closest(".astronav-dropdown")
+    .querySelectorAll(".astronav-dropdown-submenu");
+  Array.from(siblingSubmenus)
+    .filter((el) => el !== submenu && !submenu.contains(el))
+    .forEach(closeMenu);
+}
+
+function closeAllDropdowns(event) {
+  const dropdownMenus = document.querySelectorAll(".dropdown-toggle");
+  const dropdownParent = document.querySelectorAll(
+    ".astronav-dropdown, .astronav-dropdown-submenu"
+  );
+  const isButtonInsideDropdown = [
+    ...document.querySelectorAll(
+      `.astronav-dropdown button, .astronav-dropdown label, .astronav-dropdown input,
+	  .astronav-dropdown-submenu button, .astronav-dropdown-submenu label, .astronav-dropdown-submenu input,
+	  #astronav-menu`
+    ),
+  ].some((button) => button.contains(event.target));
+  if (!isButtonInsideDropdown) {
+    dropdownMenus.forEach((d) => {
+      // console.log("I ran", d);
+      // if (!d.contains(event.target)) {
+      d.classList.remove("open");
+      d.removeAttribute("open");
+      d.classList.add("hidden");
+      // }
+    });
+    dropdownParent.forEach((d) => {
+      d.classList.remove("open");
+      d.removeAttribute("open");
+      d.setAttribute("aria-expanded", "false");
+    });
+  }
+}
+
+function toggleMenu(menu) {
+  menu.classList.toggle("open");
+  const expanded = menu.getAttribute("aria-expanded") === "true";
+  menu.setAttribute("aria-expanded", expanded ? "false" : "true");
+  menu.hasAttribute("open")
+    ? menu.removeAttribute("open")
+    : menu.setAttribute("open", "");
+
+  const dropdownToggle = menu.querySelector(".dropdown-toggle");
+  const dropdownExpanded = dropdownToggle.getAttribute("aria-expanded");
+  dropdownToggle.classList.toggle("hidden");
+  dropdownToggle.setAttribute(
+    "aria-expanded",
+    dropdownExpanded === "true" ? "false" : "true"
+  );
+}
+
+function closeMenu(menu) {
+  // console.log("closing", menu);
+  menu.classList.remove("open");
+  menu.removeAttribute("open");
+  menu.setAttribute("aria-expanded", "false");
+  const dropdownToggles = menu.querySelectorAll(".dropdown-toggle");
+  dropdownToggles.forEach((toggle) => {
+    toggle.classList.add("hidden");
+    toggle.setAttribute("aria-expanded", "false");
+  });
+}
+
+function handleCloseOnClick() {
+  const navMenuItems = document.querySelector(".astronav-items");
+  const navToggle = document.getElementById("astronav-menu");
+  const navLink = navMenuItems && navMenuItems.querySelectorAll("a");
+
+  const MenuIcons = navToggle.querySelectorAll(".astronav-toggle");
+
+  navLink &&
+    navLink.forEach((item) => {
+      item.addEventListener("click", () => {
+        navMenuItems?.classList.add("hidden");
+        MenuIcons.forEach((el) => {
+          el.classList.toggle("hidden");
+        });
+      });
+    });
+}
+})();</script> <div> <div class="hidden lg:flex items-center gap-4"> <a class="px-9 py-5 rounded-2xl border border-zinc-900 bg-white hover:bg-black text-black hover:text-white inline-flex" href="/contact"> <h2 class="text-center text-xl font-normal leading-7">Request a quote</h2> </a> </div> </div> </header> </nav> </div> <script>
+  // Get references to the menu icon, open/close icons, and menu items
+  const menuIcon = document.getElementById('menu-icon');
+  const openIcon = document.getElementById('open-icon');
+  const closeIcon = document.getElementById('close-icon');
+  const menuItems = document.getElementById('menu-items');
+  const closeMenuItems = document.querySelectorAll('[data-close-menu="true"]');  // Select all items with the 'data-close-menu' attribute
+
+  // Toggle the menu visibility and icon when the menu icon is clicked
+  menuIcon.addEventListener('click', () => {
+    menuItems.classList.toggle('hidden');  // Toggle the 'hidden' class on the menu
+
+    // Toggle between open and close icons
+    openIcon.classList.toggle('hidden');
+    closeIcon.classList.toggle('hidden');
+  });
+
+  // Close the menu when any item is clicked
+  closeMenuItems.forEach(item => {
+    item.addEventListener('click', () => {
+      menuItems.classList.add('hidden');  // Add the 'hidden' class to hide the menu
+      openIcon.classList.remove('hidden');  // Show the open (hamburger) icon
+      closeIcon.classList.add('hidden');  // Hide the close (X) icon
+    });
+  });
+</script>  <main class="space-y-20"> <div class="relative flex flex-col-reverse items-center justify-center md:flex-row" id="hero"> <div class="row items-center py-5 md:pb-20 md:pt-10"> <div class="justify-center flex py-5"> <img src="/404.svg" width="50%" alt="Hero"> </div> <div class="text-center space-y-10"> <h2 class="text-2xl font-medium leading-none md:text-4xl">Sorry, we couldn't find the page you were looking for</h2> <a class="px-9 py-5 bg-black hover:bg-white text-white hover:text-black border rounded-2xl justify-items-center md:justify-items-start gap-2.5 inline-flex" rel="noopener noreferrer" href="./" target="_blank"> <h2 class="text-center text-xl font-normal leading-7">Go Back Home</h2> </a> </div> </div> </div> </main>  <footer class="relative overflow-hidden bg-white"> <div class="mx-auto max-w-6xl px-4 sm:px-6 relative z-10 my-11 pb-32">  <div class="grid gap-10 py-12 sm:grid-cols-12 border-t
+             [border-image:linear-gradient(to_right,transparent,var(--color-slate-200),transparent)1]">  <div class="space-y-4 sm:col-span-12 lg:col-span-4"> <img src="/los.png" alt="OutOBox Logo" class="h-20 w-auto"> <p class="text-sm text-gray-600">
+© OutOBox – All rights reserved.
+</p> </div>  <div class="space-y-3 sm:col-span-6 md:col-span-3 lg:col-span-2"> <h3 class="text-sm font-semibold">Company</h3> <ul class="space-y-2 text-sm"> <li><a class="text-gray-600 hover:text-gray-900" href="/about">About us</a></li> <li><a class="text-gray-600 hover:text-gray-900" href="/courses">Courses</a></li> <li><a class="text-gray-600 hover:text-gray-900" href="/certifications">Certifications</a></li> <li><a class="text-gray-600 hover:text-gray-900" href="/contact">Contact</a></li> </ul> </div> <div class="space-y-3 sm:col-span-6 md:col-span-3 lg:col-span-2"> <h3 class="text-sm font-semibold"> <a href="/#services" class="hover:text-gray-900">
+Services
+</a> </h3> <ul class="space-y-2 text-sm"> <li class="text-gray-600">Web Development</li> <li class="text-gray-600">Full Stack Apps</li> <li class="text-gray-600">SEO</li> <li class="text-gray-600">Cyber Security</li> </ul> </div>  <div class="space-y-3 sm:col-span-12 md:col-span-3 lg:col-span-2 lg:col-start-11"> <h3 class="text-sm font-semibold">Social</h3> <ul class="flex gap-4"> <!-- Twitter --> <!-- LinkedIn --> <li> <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" class="text-blue-600 hover:text-blue-700"> <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24"> <path d="M4.98 3.5C4.98 4.9 3.9 6 2.5 6S0 4.9 0 3.5 1.1 1 2.5 1 4.98 2.1 4.98 3.5ZM0 24h5V7H0v17ZM7.5 7h4.8v2.3h.1c.7-1.3 2.4-2.6 4.9-2.6 5.2 0 6.2 3.4 6.2 7.8V24h-5v-7.7c0-1.8 0-4.1-2.5-4.1s-2.9 1.9-2.9 4V24h-5V7Z"></path> </svg> </a> </li> <!-- GitHub --> <li> <a href="https://instagram.com/outobox_cyber_solutions" target="_blank" rel="noopener" aria-label="Instagram" class="text-pink-500 transition hover:text-pink-600"> <svg class="h-6 w-6 fill-current opacity-0.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> <path d="M7.75 2h8.5C19.55 2 22 4.45 22 7.75v8.5C22 19.55 19.55 22 16.25 22h-8.5C4.45 22 2 19.55 2 16.25v-8.5C2 4.45 4.45 2 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm5.25-.88a1.13 1.13 0 1 1-2.26 0 1.13 1.13 0 0 1 2.26 0Z"></path> </svg> </a> </li> </ul> </div> </div> </div>  <div class="absolute inset-x-0 bottom-[-20px] h-[290px] pointer-events-none"> <div class="pointer-events-none font-inter absolute left-1/2 -translate-x-1/2 text-center text-[358px] font-bold leading-none select-none text-gray bg-clip-text bg-gradient-to-b from-gray-200 via-gray-100 to-gray-300/60 [mask-image:linear-gradient(to_top,white_0%,transparent)]
+    [-webkit-mask-image:linear-gradient(to_top,white_0%,transparent)]">
+OutOBox
+</div> <div class="absolute inset-x-0 bottom-[-40%] flex justify-center"> <div class="h-72 w-72 rounded-full bg-blue-600 blur-[120px] opacity-40"></div> </div> </div> </footer> </main> </body></html>

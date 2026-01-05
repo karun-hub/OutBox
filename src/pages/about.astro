@@ -5,21 +5,244 @@ import Services from "../components/sections/Services.astro";
 ---
 
 <MainLayout title="About us">
-	<main class="space-y-20">
-        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-3">
+	<main>
+        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-3 mb-16">
             <div class="relative flex flex-col-reverse items-center md:flex-row" id="hero">
                 <div class="row items-center py-5 md:pb-20 md:pt-10">
-                    <div class="text-center space-y-10">
-                        <h2 class="text-5xl font-medium leading-none md:text-6xl">We Navigate the <br> digital landscape <br> for success</h2>
-                        <p class="mt-6 mb-8  text-xl font-normal leading-7 sm:mb-12">Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.</p>
-                        <a class="px-9 py-5 bg-zinc-900 hover:bg-white text-white hover:text-black border rounded-2xl justify-items-center md:justify-items-start gap-2.5 inline-flex" rel="noopener noreferrer"  href="https://github.com/manulthanura/Positivus" target="_blank">
+                    <div class="text-center space-y-8">
+                        <h2 class="text-5xl font-medium leading-none md:text-6xl animate-fade-in-up">
+                            We Navigate the <br> digital landscape <br> for success
+                        </h2>
+                        <p class="text-xl font-normal leading-7 animate-fade-in-up animation-delay-200">
+                            Out O Box helps individuals and businesses thrive through expert cybersecurity training, modern web development, and powerful digital solutions tailored to your needs.
+                        </p>
+                        <a class="px-9 py-5 bg-zinc-900 hover:bg-white text-white hover:text-black border rounded-2xl justify-items-center md:justify-items-start gap-2.5 inline-flex transition-all duration-300 hover:scale-105 animate-fade-in-up animation-delay-400" 
+                           rel="noopener noreferrer" 
+                           href="/contact" 
+                           target="_blank">
                             <h2 class="text-center text-xl font-normal leading-7">Book a consultation</h2>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-        <Sponsors />
-        <Services />
+        
+        <div class="scroll-reveal mb-16">
+            <Sponsors />
+        </div>
+
+        <!-- Mission & Vision Section -->
+        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 scroll-reveal">
+            <div class="grid gap-16 md:grid-cols-2">
+                <!-- Mission -->
+                <div class="space-y-4 relative">
+                    <div class="absolute -top-4 -left-4 w-20 h-20 bg-orange-500/10 rounded-full blur-2xl"></div>
+                    <h3 class="text-3xl font-semibold relative">
+                        <span class="border-l-4 border-orange-500 pl-4">Mission Statement</span>
+                    </h3>
+                    <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+                        At Out O Box, our mission is to empower individuals and businesses through expert cybersecurity training and modern digital solutions. We deliver high-quality web development, web applications, and skill-focused cyber programs that help people grow in tech and help businesses scale in the digital era.
+                    </p>
+                </div>
+
+                <!-- Vision -->
+                <div class="space-y-4 relative">
+                    <div class="absolute -top-4 -right-4 w-20 h-20 bg-orange-500/10 rounded-full blur-2xl"></div>
+                    <h3 class="text-3xl font-semibold relative">
+                        <span class="border-l-4 border-orange-500 pl-4">Vision Statement</span>
+                    </h3>
+                    <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+                        Our vision is to become a leading global hub for cybersecurity education and digital transformation—equipping learners with in-demand skills and helping businesses innovate, stay secure, and thrive in an increasingly connected world.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Our Values Section -->
+        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 scroll-reveal">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-semibold mb-4">
+                    Our <span class="text-orange-500">Values</span>
+                </h3>
+            </div>
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                <!-- Excellence -->
+                <div class="p-6 bg-gray-50 dark:bg-gray-800 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/20 ">
+                    <div class="flex items-center justify-center w-12 h-12 mb-4 rounded-lg bg-zinc-900 dark:bg-white">
+                        <svg class="w-6 h-6 text-white dark:text-zinc-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2">Excellence</h4>
+                    <p class="text-gray-600 dark:text-gray-400">We strive to deliver top-tier training and digital products with unmatched quality.</p>
+                </div>
+
+                <!-- Innovation -->
+                <div class="p-6 bg-gray-50 dark:bg-gray-800 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/20">
+                    <div class="flex items-center justify-center w-12 h-12 mb-4 rounded-lg bg-zinc-900 dark:bg-white">
+                        <svg class="w-6 h-6 text-white dark:text-zinc-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2">Innovation</h4>
+                    <p class="text-gray-600 dark:text-gray-400">We adopt the latest tools, frameworks, and technologies in both cybersecurity and web development.</p>
+                </div>
+
+                <!-- Practicality -->
+                <div class="p-6 bg-gray-50 dark:bg-gray-800 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/20">
+                    <div class="flex items-center justify-center w-12 h-12 mb-4 rounded-lg bg-zinc-900 dark:bg-white">
+                        <svg class="w-6 h-6 text-white dark:text-zinc-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2">Practicality</h4>
+                    <p class="text-gray-600 dark:text-gray-400">We focus on real-world learning and functional digital solutions that address real business needs.</p>
+                </div>
+
+                <!-- Integrity -->
+                <div class="p-6 bg-gray-50 dark:bg-gray-800 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/20 ">
+                    <div class="flex items-center justify-center w-12 h-12 mb-4 rounded-lg bg-zinc-900 dark:bg-white">
+                        <svg class="w-6 h-6 text-white dark:text-zinc-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2">Integrity</h4>
+                    <p class="text-gray-600 dark:text-gray-400">We maintain transparency, trust, and strong ethics across all our services.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Why Choose Us Section -->
+        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 scroll-reveal">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-semibold mb-4">
+                    Why Choose <span class="text-orange-500">Out O Box?</span>
+                </h3>
+            </div>
+            <div class="grid gap-8 md:grid-cols-3">
+                <!-- Expert Team -->
+                <div class="text-center p-8 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl transition-all duration-300 hover:shadow-xl hover:shadow-orange-500/30 hover:-translate-y-2 ">
+                    <div class="flex items-center justify-center w-16 h-16 mx-auto mb-6 rounded-full bg-zinc-900 dark:bg-white shadow-lg">
+                        <svg class="w-8 h-8 text-white dark:text-zinc-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-semibold mb-3">Expert Instructors & Developers</h4>
+                    <p class="text-gray-700 dark:text-gray-300">Our team brings industry experience in cybersecurity training and modern web development.</p>
+                </div>
+
+                <!-- Hands-on Learning -->
+                <div class="text-center p-8 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl transition-all duration-300 hover:shadow-xl hover:shadow-orange-500/20 hover:-translate-y-2">
+                    <div class="flex items-center justify-center w-16 h-16 mx-auto mb-6 rounded-full bg-zinc-900 dark:bg-white shadow-lg">
+                        <svg class="w-8 h-8 text-white dark:text-zinc-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-semibold mb-3">Hands-on Cyber Labs & Custom Solutions</h4>
+                    <p class="text-gray-600 dark:text-gray-400">Learn with real-world security scenarios and get tailored websites and web apps for your business.</p>
+                </div>
+
+                <!-- Continuous Support -->
+                <div class="text-center p-8 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl transition-all duration-300 hover:shadow-xl hover:shadow-orange-500/30 hover:-translate-y-2 ">
+                    <div class="flex items-center justify-center w-16 h-16 mx-auto mb-6 rounded-full bg-zinc-900 dark:bg-white shadow-lg">
+                        <svg class="w-8 h-8 text-white dark:text-zinc-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-semibold mb-3">Continuous Support</h4>
+                    <p class="text-gray-700 dark:text-gray-300">From career assistance to ongoing maintenance, we guide learners and businesses every step of the way.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-reveal mb-32">
+            <Services />
+        </div>
 	</main>
+
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .animation-delay-200 {
+            animation-delay: 0.2s;
+            opacity: 0;
+        }
+
+        .animation-delay-400 {
+            animation-delay: 0.4s;
+            opacity: 0;
+        }
+
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+
+    <script>
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all scroll-reveal elements
+        document.querySelectorAll('.scroll-reveal').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
 </MainLayout>
